@@ -1,4 +1,5 @@
-const { Schema } = require('mongoose')
+const mongoose = require('mongoose')
+const Schema = mongoose.Schema
 
 const Princess = new Schema(
   {
@@ -8,11 +9,12 @@ const Princess = new Schema(
     hair: { type: String, required: true },
     mouth: { type: String, required: true },
     dress: { type: String, required: true },
-    accessories: [{ type: Array, required: false }],
-    background: { type: String, required: true },
-    frame: { type: String, required: true }
+    accessories: [{ type: String, required: false }],
+    background: { type: String, required: false },
+    frame: { type: String, required: false },
+    base: { type: Boolean }
   },
   { timestamps: true }
 )
 
-module.exports = Princess
+module.exports = mongoose.model('Princess', Princess)
