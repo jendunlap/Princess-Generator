@@ -1,7 +1,6 @@
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
 import { Create, Gallery, Login } from './pages'
-import { CreateForm, LoginForm, Nav, RegisterForm } from './components'
 
 function App() {
   return (
@@ -10,6 +9,8 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Login />} />
+          <Route path="/create" element={<Create />} />
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </main>
     </div>
