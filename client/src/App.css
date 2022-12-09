@@ -2,22 +2,23 @@
   text-align: center;
 }
 
-.princessDiv {
+/* PRINCESS.JS */
+
+.princessPortrait {
+  height: 400px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-/* .princessPortrait {
-  position: relative;
-} */
-
 .princessPortraitComponent {
   position: absolute;
-  /* top: 0;
-  left: 0; */
-  height: 400px;;
+  height: 400px;
+}
+
+.princessPortraitName {
+  margin: 0;
 }
 
 /* PRINCESSES.JS */
@@ -30,5 +31,5 @@
 }
 
 .princessGridCard {
-  height: 50%;
+
 }

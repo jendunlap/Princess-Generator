@@ -3,13 +3,13 @@ const Princess = (props) => {
     <div className="princessDiv">
       <div className="princessPortrait">
         <img src={props.skin} className="princessPortraitComponent" />
-        <img src={props.eyes} className="princessPortraitComponent" />{' '}
-        <img src={props.mouth} className="princessPortraitComponent" />{' '}
-        <img src={props.hair} className="princessPortraitComponent" />{' '}
-        <img src={props.dress} className="princessPortraitComponent" />{' '}
+        <img src={props.eyes} className="princessPortraitComponent" />
+        <img src={props.mouth} className="princessPortraitComponent" />
+        <img src={props.hair} className="princessPortraitComponent" />
+        <img src={props.dress} className="princessPortraitComponent" />
+        <img src={props.accessories} className="princessPortraitComponent" />
       </div>
-
-      <h1>{props.name}</h1>
+      <h1 className="princessPortraitName">{props.name}</h1>
     </div>
   )
 }
