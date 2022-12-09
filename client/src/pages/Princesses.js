@@ -25,10 +25,10 @@ const Princesses = () => {
 
   return (
     <div className="princessGrid">
-      <div className="princessGridCard">
-        {princesses
-          .filter((princess) => princess.base === true)
-          .map((princess) => (
+      {princesses
+        .filter((princess) => princess.base === true)
+        .map((princess) => (
+          <div className="princessGridCard">
             <Princess
               id={princess._id}
               key={princess._id}
@@ -44,8 +44,8 @@ const Princesses = () => {
               frame={princess.frame}
               onClick={viewPrincess}
             />
-          ))}
-      </div>
+          </div>
+        ))}
     </div>
   )
 }
