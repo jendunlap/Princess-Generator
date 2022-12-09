@@ -36,3 +36,17 @@
 .princessGridCard {
   width: 400px;
 }
+
+/* CREATE.JS */
+
+.princessCreation {
+  display: flex;
+  justify-content: center;
+  align-items: bottom;
+}
+.princessCreationComponent {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
