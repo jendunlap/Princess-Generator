@@ -13,6 +13,9 @@ const Nav = () => {
         <Link to="/gallery" className="headerLink">
           Gallery
         </Link>
+        <Link to="/princesses" className="headerLink">
+          Princesses
+        </Link>
       </nav>
     </header>
   )

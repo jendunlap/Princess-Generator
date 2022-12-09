@@ -2,6 +2,7 @@ import './App.css'
 import { Route, Routes } from 'react-router-dom'
 import Create from './pages/Create'
 import Login from './pages/Login'
+import Princesses from './pages/Princesses'
 import Gallery from './pages/Gallery'
 import Nav from './components/Nav'
 import { CheckSession } from './services/Auth'
@@ -32,6 +33,7 @@ function App() {
           <Route path="/" element={<Login setUser={setUser} />} />
           <Route path="/create" element={<Create />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/princesses" element={<Princesses />} />
         </Routes>
       </main>
     </div>
