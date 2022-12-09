@@ -12,7 +12,7 @@ export const SignIn = async (data) => {
   }
 }
 
-export const RegisterUser = async (data) => {
+export const Register = async (data) => {
   try {
     const res = await Client.post('api/auth/register', data)
     return res.data
