@@ -1,9 +1,9 @@
 import LoginForm from '../components/LoginForm'
 import RegisterForm from '../components/RegisterForm'
-import { userState } from 'react'
+import { useState } from 'react'
 
 const Login = ({ setUser }) => {
-  const [isVisible, setIsVisible] = userState(true)
+  const [isVisible, setIsVisible] = useState(true)
 
   const handleLogin = () => {
     setIsVisible(false)

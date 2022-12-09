@@ -2,7 +2,7 @@ import Client from './api'
 
 export const SignIn = async (data) => {
   try {
-    const res = await Client.post('api/auth/login', data)
+    const res = await Client.post('/auth/login', data)
     localStorage.setItem('token', res.data.token)
     let userId = res.data.user.id
     localStorage.setItem('id', userId)
@@ -14,7 +14,7 @@ export const SignIn = async (data) => {
 
 export const Register = async (data) => {
   try {
-    const res = await Client.post('api/auth/register', data)
+    const res = await Client.post('/auth/register', data)
     return res.data
   } catch (error) {
     throw error
@@ -23,8 +23,7 @@ export const Register = async (data) => {
 
 export const CheckSession = async () => {
   try {
-    // Checks if the current token if it exists is valid
-    const res = await Client.get('api/auth/session')
+    const res = await Client.get('/auth/session')
     return res.data
   } catch (error) {
     throw error
@@ -33,7 +32,7 @@ export const CheckSession = async () => {
 
 export const updateProfile = async (userId, formState) => {
   try {
-    await Client.put(`api/users/${userId}`, formState)
+    await Client.put(`/users/${userId}`, formState)
   } catch (error) {
     throw error
   }
@@ -41,7 +40,7 @@ export const updateProfile = async (userId, formState) => {
 
 export const deleteProfile = async (userId) => {
   try {
-    await Client.delete(`api/users/${userId}`)
+    await Client.delete(`/users/${userId}`)
   } catch (error) {
     throw error
   }
