@@ -5,6 +5,7 @@ import skins from '../images/skins.js'
 import eyes from '../images/eyes.js'
 import lips from '../images/lips.js'
 import hairs from '../images/hairs.js'
+import dresses from '../images/dresses.js'
 
 const Create = () => {
   console.log(skins)
@@ -13,7 +14,8 @@ const Create = () => {
   const initialState = {
     skin: 'https://i.imgur.com/HFj9sAV.png',
     eyes: 'https://i.imgur.com/KQ6ib8I.png',
-    hair: 'https://i.imgur.com/569FUZO.png'
+    hair: 'https://i.imgur.com/569FUZO.png',
+    dress: 'https://i.imgur.com/krS5MAK.png'
   }
 
   const [formState, setFormState] = useState(initialState)
@@ -25,6 +27,8 @@ const Create = () => {
   const [selectedLips, setSelectedLips] = useState(false)
   const [selectingHairs, setSelectingHairs] = useState(false)
   const [selectedHairs, setSelectedHairs] = useState(false)
+  const [selectingDress, setSelectingDress] = useState(false)
+  const [selectedDress, setSelectedDress] = useState(false)
 
   const selectSkin = (skins) => {
     let tempState = { ...formState, skin: skins.url }
@@ -41,13 +45,19 @@ const Create = () => {
     let tempState = { ...formState, lips: lips.url }
     setSelectedLips(lips.url)
     setFormState(tempState)
-    setSelectingEyes(false)
+    setSelectingLips(false)
   }
   const selectHairs = (hairs) => {
     let tempState = { ...formState, hair: hairs.url }
     setSelectedHairs(hairs.url)
     setFormState(tempState)
-    setSelectingEyes(false)
+    setSelectingHairs(false)
+  }
+  const selectDress = (dresses) => {
+    let tempState = { ...formState, hair: dresses.url }
+    setSelectedDress(dresses.url)
+    setFormState(tempState)
+    setSelectingDress(false)
   }
 
   // const handleChange = (e) => {
@@ -189,6 +199,39 @@ const Create = () => {
             ))}
           </div>
         )}
+        {/* DRESS SELECTION */}
+
+        <label className="dressDiv formLabel" htmlFor="selectDress">
+          Dress Style
+        </label>
+        {selectingDress ? (
+          <div className="dressMap">
+            {dresses.map((dress, index) => (
+              <img
+                className="mappedDresses"
+                key={index}
+                src={dress.shape}
+                alt={dress.name}
+                onClick={() => selectDress(dress)}
+              />
+            ))}
+          </div>
+        ) : (
+          <div
+            className="selectDressButton"
+            onClick={() => setSelectingDress(true)}
+          >
+            {dresses.map((dress, index) => (
+              <img
+                className="mappedDresses"
+                key={index}
+                src={dress.shape}
+                alt={dress.name}
+                onClick={() => selectDress(dress)}
+              />
+            ))}
+          </div>
+        )}
       </form>
       <div className="princessCreation">
         <img className="princessCreationComponent" src={formState.skin} />
@@ -214,6 +257,14 @@ const Create = () => {
           <img
             className="princessCreationComponent"
             src="https://i.imgur.com/569FUZO.png"
+          />
+        )}
+        {selectedDress ? (
+          <img className="princessCreationComponent" src={selectedDress} />
+        ) : (
+          <img
+            className="princessCreationComponent"
+            src="https://i.imgur.com/krS5MAK.png"
           />
         )}
       </div>
