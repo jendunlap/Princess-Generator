@@ -3,6 +3,7 @@ import { useNavigate, Link } from 'react-router-dom'
 import axios from 'axios'
 import skins from '../images/skins.js'
 import eyes from '../images/eyes.js'
+import lips from '../images/lips.js'
 
 const Create = () => {
   console.log(skins)
@@ -18,6 +19,8 @@ const Create = () => {
   const [selectingSkin, setSelectingSkin] = useState(false)
   const [selectingEyes, setSelectingEyes] = useState(false)
   const [selectedEyes, setSelectedEyes] = useState(false)
+  const [selectingLips, setSelectingLips] = useState(false)
+  const [selectedLips, setSelectedLips] = useState(false)
 
   const selectSkin = (skins) => {
     let tempState = { ...formState, skin: skins.url }
@@ -27,6 +30,12 @@ const Create = () => {
   const selectEyes = (eyes) => {
     let tempState = { ...formState, eyes: eyes.url }
     setSelectedEyes(eyes.url)
+    setFormState(tempState)
+    setSelectingEyes(false)
+  }
+  const selectLips = (lips) => {
+    let tempState = { ...formState, lips: lips.url }
+    setSelectedLips(lips.url)
     setFormState(tempState)
     setSelectingEyes(false)
   }
@@ -104,6 +113,39 @@ const Create = () => {
             ))}
           </div>
         )}
+        {/* LIP SELECTION */}
+
+        <label className="lipsDiv formLabel" htmlFor="selectLips">
+          Lip Shape
+        </label>
+        {selectingLips ? (
+          <div className="lipMap">
+            {lips.map((lip, index) => (
+              <img
+                className="mappedLips"
+                key={index}
+                src={lip.shape}
+                alt={lip.name}
+                onClick={() => selectLips(lip)}
+              />
+            ))}
+          </div>
+        ) : (
+          <div
+            className="selectLipsButton"
+            onClick={() => setSelectingLips(true)}
+          >
+            {lips.map((lip, index) => (
+              <img
+                className="mappedLips"
+                key={index}
+                src={lip.shape}
+                alt={lip.name}
+                onClick={() => selectLips(lip)}
+              />
+            ))}
+          </div>
+        )}
       </form>
       <div className="princessCreation">
         <img className="princessCreationComponent" src={formState.skin} />
@@ -113,6 +155,14 @@ const Create = () => {
           <img
             className="princessCreationComponent"
             src="https://i.imgur.com/KQ6ib8I.png"
+          />
+        )}
+        {selectedLips ? (
+          <img className="princessCreationComponent" src={selectedLips} />
+        ) : (
+          <img
+            className="princessCreationComponent"
+            src="https://i.imgur.com/AHezimP.png"
           />
         )}
       </div>

@@ -39,7 +39,7 @@
 
 /* CREATE.JS */
 
-.mappedSkin {
+.mappedSkin, .mappedEyes, .mappedLips {
   padding: 5px;
   height: 50px;
   border-radius: 50px;
