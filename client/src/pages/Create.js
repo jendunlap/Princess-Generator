@@ -4,6 +4,7 @@ import axios from 'axios'
 import skins from '../images/skins.js'
 import eyes from '../images/eyes.js'
 import lips from '../images/lips.js'
+import hairs from '../images/hairs.js'
 
 const Create = () => {
   console.log(skins)
@@ -11,7 +12,8 @@ const Create = () => {
 
   const initialState = {
     skin: 'https://i.imgur.com/HFj9sAV.png',
-    eyes: 'https://i.imgur.com/KQ6ib8I.png'
+    eyes: 'https://i.imgur.com/KQ6ib8I.png',
+    hair: 'https://i.imgur.com/569FUZO.png'
   }
 
   const [formState, setFormState] = useState(initialState)
@@ -21,6 +23,8 @@ const Create = () => {
   const [selectedEyes, setSelectedEyes] = useState(false)
   const [selectingLips, setSelectingLips] = useState(false)
   const [selectedLips, setSelectedLips] = useState(false)
+  const [selectingHairs, setSelectingHairs] = useState(false)
+  const [selectedHairs, setSelectedHairs] = useState(false)
 
   const selectSkin = (skins) => {
     let tempState = { ...formState, skin: skins.url }
@@ -36,6 +40,12 @@ const Create = () => {
   const selectLips = (lips) => {
     let tempState = { ...formState, lips: lips.url }
     setSelectedLips(lips.url)
+    setFormState(tempState)
+    setSelectingEyes(false)
+  }
+  const selectHairs = (hairs) => {
+    let tempState = { ...formState, hair: hairs.url }
+    setSelectedHairs(hairs.url)
     setFormState(tempState)
     setSelectingEyes(false)
   }
@@ -146,6 +156,39 @@ const Create = () => {
             ))}
           </div>
         )}
+        {/* HAIR SELECTION */}
+
+        <label className="hairDiv formLabel" htmlFor="selectHairs">
+          Hair Style
+        </label>
+        {selectingHairs ? (
+          <div className="hairMap">
+            {hairs.map((hair, index) => (
+              <img
+                className="mappedHairs"
+                key={index}
+                src={hair.shape}
+                alt={hair.name}
+                onClick={() => selectHairs(hair)}
+              />
+            ))}
+          </div>
+        ) : (
+          <div
+            className="selectHairsButton"
+            onClick={() => setSelectingHairs(true)}
+          >
+            {hairs.map((hair, index) => (
+              <img
+                className="mappedHairs"
+                key={index}
+                src={hair.shape}
+                alt={hair.name}
+                onClick={() => selectHairs(hair)}
+              />
+            ))}
+          </div>
+        )}
       </form>
       <div className="princessCreation">
         <img className="princessCreationComponent" src={formState.skin} />
@@ -163,6 +206,14 @@ const Create = () => {
           <img
             className="princessCreationComponent"
             src="https://i.imgur.com/AHezimP.png"
+          />
+        )}
+        {selectedHairs ? (
+          <img className="princessCreationComponent" src={selectedHairs} />
+        ) : (
+          <img
+            className="princessCreationComponent"
+            src="https://i.imgur.com/569FUZO.png"
           />
         )}
       </div>
