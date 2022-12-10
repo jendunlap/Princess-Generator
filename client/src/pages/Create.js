@@ -1,26 +1,29 @@
-import { useEffect, useState } from 'react'
-import { useNavigate, Link } from 'react-router-dom'
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import skins from '../images/skins.js'
 import eyes from '../images/eyes.js'
+import eyeColors from '../images/eyeColors.js'
 import lips from '../images/lips.js'
 import hairs from '../images/hairs.js'
 import dresses from '../images/dresses.js'
 
 const Create = () => {
-  console.log(skins)
-  // let navigate = useNavigate()
+  let navigate = useNavigate()
 
   const initialState = {
+    name: '',
     skin: 'https://i.imgur.com/HFj9sAV.png',
     eyes: 'https://i.imgur.com/KQ6ib8I.png',
     hair: 'https://i.imgur.com/569FUZO.png',
-    dress: 'https://i.imgur.com/krS5MAK.png'
+    dress: 'https://i.imgur.com/krS5MAK.png',
+    base: false
   }
 
   const [formState, setFormState] = useState(initialState)
 
   const [selectingSkin, setSelectingSkin] = useState(false)
+  const [selectedEyeColor, setSelectedEyeColor] = useState(false)
   const [selectingEyes, setSelectingEyes] = useState(false)
   const [selectedEyes, setSelectedEyes] = useState(false)
   const [selectingLips, setSelectingLips] = useState(false)
@@ -29,11 +32,15 @@ const Create = () => {
   const [selectedHairs, setSelectedHairs] = useState(false)
   const [selectingDress, setSelectingDress] = useState(false)
   const [selectedDress, setSelectedDress] = useState(false)
+  console.log(selectedEyeColor)
 
   const selectSkin = (skins) => {
     let tempState = { ...formState, skin: skins.url }
     setFormState(tempState)
     setSelectingSkin(false)
+  }
+  const selectEyeColor = (eyeColors) => {
+    setSelectedEyeColor(eyeColors.url)
   }
   const selectEyes = (eyes) => {
     let tempState = { ...formState, eyes: eyes.url }
@@ -60,15 +67,20 @@ const Create = () => {
     setSelectingDress(false)
   }
 
-  // const handleChange = (e) => {
-  //   setFormState({ ...formState, [e.target.id]: e.target.value })
-  // }
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    await axios.post('http://localhost:3001/princesses', formState)
+    navigate('/gallery')
+  }
+
+  const handleChange = (e) => {
+    setFormState({ ...formState, [e.target.id]: e.target.value })
+  }
 
   return (
     <div className="createPage">
       <form className="createForm">
         {/* SKIN SELECTION */}
-
         <label className="skinDiv formLabel" htmlFor="selectSkin">
           Skin Tone
         </label>
@@ -101,11 +113,68 @@ const Create = () => {
           </div>
         )}
         {/* EYE SELECTION */}
-
+        {/* COLOR */}
+        <label className="eyeColorDiv formLabel" htmlFor="selectEyeColor">
+          Eye Color
+        </label>
+        <div className="eyeColorMap">
+          {eyeColors.map((color, index) => (
+            <img
+              className="mappedEyes"
+              key={index}
+              src={color.url}
+              alt={color.name}
+              onClick={() => selectEyeColor(color)}
+            />
+          ))}
+        </div>
+        {/* SHAPE */}
         <label className="eyesDiv formLabel" htmlFor="selectEyes">
           Eye Shape
         </label>
-        {selectingEyes ? (
+        {(() => {
+          switch (selectedEyeColor) {
+            case 'https://i.imgur.com/dRvr5fJ.jpg':
+              return (
+                <div>
+                  {selectingEyes ? (
+                    <div className="eyeMap">
+                      {eyes
+                        .filter((eye) => eye.color === 'blue')
+                        .map((eye, index) => (
+                          <img
+                            className="mappedEyes"
+                            key={index}
+                            src={eye.shape}
+                            alt={eye.name}
+                            onClick={() => selectEyes(eye)}
+                          />
+                        ))}
+                    </div>
+                  ) : (
+                    <div
+                      className="selectEyesButton"
+                      onClick={() => setSelectingEyes(true)}
+                    >
+                      {eyes
+                        .filter((eye) => eye.color === 'blue')
+                        .map((eye, index) => (
+                          <img
+                            className="mappedEyes"
+                            key={index}
+                            src={eye.shape}
+                            alt={eye.name}
+                            onClick={() => selectEyes(eye)}
+                          />
+                        ))}
+                    </div>
+                  )}
+                </div>
+              )
+              break
+          }
+        })()}
+        {/* {selectingEyes ? (
           <div className="eyeMap">
             {eyes.map((eye, index) => (
               <img
@@ -132,9 +201,8 @@ const Create = () => {
               />
             ))}
           </div>
-        )}
+        )} */}
         {/* LIP SELECTION */}
-
         <label className="lipsDiv formLabel" htmlFor="selectLips">
           Lip Shape
         </label>
@@ -167,7 +235,6 @@ const Create = () => {
           </div>
         )}
         {/* HAIR SELECTION */}
-
         <label className="hairDiv formLabel" htmlFor="selectHairs">
           Hair Style
         </label>
@@ -200,7 +267,6 @@ const Create = () => {
           </div>
         )}
         {/* DRESS SELECTION */}
-
         <label className="dressDiv formLabel" htmlFor="selectDress">
           Dress Style
         </label>
@@ -232,6 +298,22 @@ const Create = () => {
             ))}
           </div>
         )}
+        <div>
+          <label htmlFor="name" className="createPrincessName">
+            Name your Princess!
+          </label>
+          <input
+            onChange={handleChange}
+            type="text"
+            id="name"
+            value={formState.name}
+          ></input>
+        </div>
+        <div>
+          <button className="addToGallery" type="submit" onClick={handleSubmit}>
+            Add to Gallery!
+          </button>
+        </div>
       </form>
       <div className="princessCreation">
         <img className="princessCreationComponent" src={formState.skin} />

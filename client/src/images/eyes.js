@@ -2,12 +2,14 @@ const eyes = [
   {
     name: 'Cinderella',
     shape: 'https://i.imgur.com/RPZBLvU.jpg',
-    url: 'https://i.imgur.com/KQ6ib8I.png'
+    url: 'https://i.imgur.com/KQ6ib8I.png',
+    color: 'blue'
   },
   {
     name: 'Ariel',
     shape: 'https://i.imgur.com/lBeb0Jz.jpg',
-    url: 'https://i.imgur.com/BiGJdaN.png'
+    url: 'https://i.imgur.com/BiGJdaN.png',
+    color: 'blue'
   },
   {
     name: 'Mulan',
