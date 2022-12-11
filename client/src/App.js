@@ -6,6 +6,7 @@ import Princesses from './pages/Princesses'
 import PrincessInfo from './pages/PrincessInfo'
 import Gallery from './pages/Gallery'
 import Nav from './components/Nav'
+import Modify from './pages/Modify'
 import { CheckSession } from './services/Auth'
 import { useState, useEffect } from 'react'
 
@@ -36,6 +37,7 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/princesses" element={<Princesses />} />
           <Route path="/princesses/:princessId" element={<PrincessInfo />} />
+          <Route path="/modify/:princessId" element={<Modify />} />
         </Routes>
       </main>
     </div>

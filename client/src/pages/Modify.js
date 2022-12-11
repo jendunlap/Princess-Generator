@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { useParams, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import skins from '../images/skins.js'
 import eyes from '../images/eyes.js'
@@ -8,12 +8,13 @@ import lips from '../images/lips.js'
 import hairs from '../images/hairs.js'
 import dresses from '../images/dresses.js'
 
-const Create = () => {
+const Modify = () => {
+  let { princessId } = useParams()
   let navigate = useNavigate()
 
   const initialState = {
     name: '',
-    skin: 'https://i.imgur.com/qQ0v2g0.png',
+    skin: '',
     eyes: '',
     hair: '',
     mouth: '',
@@ -70,13 +71,23 @@ const Create = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await axios.post('http://localhost:3001/princesses', formState)
+    await axios.put(`http://localhost:3001/princesses/${princessId}`, formState)
     navigate('/gallery')
   }
 
   const handleChange = (e) => {
     setFormState({ ...formState, [e.target.id]: e.target.value })
   }
+
+  useEffect(() => {
+    const getPrincessInfo = async () => {
+      const response = await axios.get(
+        `http://localhost:3001/princesses/${princessId}`
+      )
+      setFormState(response.data.princess)
+    }
+    getPrincessInfo()
+  }, [])
 
   return (
     <div className="createPage">
@@ -363,47 +374,23 @@ const Create = () => {
         </div>
         <div>
           <button className="addToGallery" type="submit" onClick={handleSubmit}>
-            Add to Gallery!
+            Update Princess!
           </button>
         </div>
       </form>
       <div className="princessCreation">
         <img className="princessCreationComponent" src={formState.skin} />
-        {selectedEyes ? (
-          <img className="princessCreationComponent" src={selectedEyes} />
-        ) : (
-          <img
-            className="princessCreationComponent"
-            src="https://i.imgur.com/KQ6ib8I.png"
-          />
-        )}
-        {selectedLips ? (
-          <img className="princessCreationComponent" src={selectedLips} />
-        ) : (
-          <img
-            className="princessCreationComponent"
-            src="https://i.imgur.com/AHezimP.png"
-          />
-        )}
-        {selectedHairs ? (
-          <img className="princessCreationComponent" src={selectedHairs} />
-        ) : (
-          <img
-            className="princessCreationComponent"
-            src="https://i.imgur.com/569FUZO.png"
-          />
-        )}
-        {selectedDress ? (
-          <img className="princessCreationComponent" src={selectedDress} />
-        ) : (
-          <img
-            className="princessCreationComponent"
-            src="https://i.imgur.com/krS5MAK.png"
-          />
-        )}
+
+        <img className="princessCreationComponent" src={formState.eyes} />
+
+        <img className="princessCreationComponent" src={formState.mouth} />
+
+        <img className="princessCreationComponent" src={formState.hair} />
+
+        <img className="princessCreationComponent" src={formState.dress} />
       </div>
     </div>
   )
 }
 
-export default Create
+export default Modify

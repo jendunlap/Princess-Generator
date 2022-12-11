@@ -11,6 +11,7 @@ const PrincessInfo = () => {
     const response = await axios.get(
       `http://localhost:3001/princesses/${princessId}`
     )
+    console.log(princessInfo)
 
     setPrincessInfo(response.data.princess)
   }
@@ -23,7 +24,7 @@ const PrincessInfo = () => {
   }
 
   const modifyPrincess = async () => {
-    navigate(`/modifyprincess${princessId}`)
+    navigate(`/modify/${princessId}`)
   }
 
   useEffect(() => {
@@ -37,18 +38,18 @@ const PrincessInfo = () => {
           <h1>{princessInfo.name}</h1>
         </div>
       ) : null}
-      {princessInfo.base ? null : (
-        <div>
-          <section className="buttons">
-            <button className="modificationButton" onClick={deletePrincess}>
-              delete
-            </button>
-            <button className="modificationButton" onClick={modifyPrincess}>
-              modify
-            </button>
-          </section>
-        </div>
-      )}
+      {/* {princessInfo.base ? null : ( */}
+      <div>
+        <section className="buttons">
+          <button className="modificationButton" onClick={deletePrincess}>
+            delete
+          </button>
+          <button className="modificationButton" onClick={modifyPrincess}>
+            modify
+          </button>
+        </section>
+      </div>
+      {/* )} */}
     </div>
   )
 }
