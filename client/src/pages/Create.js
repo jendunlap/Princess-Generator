@@ -13,11 +13,11 @@ const Create = () => {
 
   const initialState = {
     name: '',
-    skin: 'https://i.imgur.com/HFj9sAV.png',
-    eyes: 'https://i.imgur.com/KQ6ib8I.png',
-    hair: 'https://i.imgur.com/569FUZO.png',
-    dress: 'https://i.imgur.com/krS5MAK.png',
-    base: false
+    skin: 'https://i.imgur.com/qQ0v2g0.png',
+    eyes: '',
+    hair: '',
+    mouth: '',
+    dress: ''
   }
 
   const [formState, setFormState] = useState(initialState)
@@ -32,7 +32,7 @@ const Create = () => {
   const [selectedHairs, setSelectedHairs] = useState(false)
   const [selectingDress, setSelectingDress] = useState(false)
   const [selectedDress, setSelectedDress] = useState(false)
-  console.log(selectedEyeColor)
+  console.log(formState)
 
   const selectSkin = (skins) => {
     let tempState = { ...formState, skin: skins.url }
@@ -61,7 +61,7 @@ const Create = () => {
     setSelectingHairs(false)
   }
   const selectDress = (dresses) => {
-    let tempState = { ...formState, hair: dresses.url }
+    let tempState = { ...formState, dress: dresses.url }
     setSelectedDress(dresses.url)
     setFormState(tempState)
     setSelectingDress(false)
@@ -69,7 +69,7 @@ const Create = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await axios.post('http://localhost:3001/myprincesses', formState)
+    await axios.post('http://localhost:3001/princesses', formState)
     navigate('/gallery')
   }
 
