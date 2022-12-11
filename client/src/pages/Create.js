@@ -67,9 +67,9 @@ const Create = () => {
     setSelectingDress(false)
   }
 
-  const handleSubmit = async (event) => {
-    event.preventDefault()
-    await axios.post('http://localhost:3001/princesses', formState)
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    await axios.post('http://localhost:3001/myprincesses', formState)
     navigate('/gallery')
   }
 
@@ -252,35 +252,8 @@ const Create = () => {
               break
           }
         })()}
-        {/* {selectingEyes ? (
-          <div className="eyeMap">
-            {eyes.map((eye, index) => (
-              <img
-                className="mappedEyes"
-                key={index}
-                src={eye.shape}
-                alt={eye.name}
-                onClick={() => selectEyes(eye)}
-              />
-            ))}
-          </div>
-        ) : (
-          <div
-            className="selectEyesButton"
-            onClick={() => setSelectingEyes(true)}
-          >
-            {eyes.map((eye, index) => (
-              <img
-                className="mappedEyes"
-                key={index}
-                src={eye.shape}
-                alt={eye.name}
-                onClick={() => selectEyes(eye)}
-              />
-            ))}
-          </div>
-        )} */}
         {/* LIP SELECTION */}
+
         <label className="lipsDiv formLabel" htmlFor="selectLips">
           Lip Shape
         </label>

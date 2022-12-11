@@ -1,5 +1,8 @@
 const Princess = require('../models/princess')
 const User = require('../models/user')
+const MyPrincess = require('../models/myPrincess')
+
+// PRINCESSES
 
 const createPrincess = async (req, res) => {
   try {
@@ -60,6 +63,8 @@ const deletePrincess = async (req, res) => {
   }
 }
 
+// USERS
+
 const createUser = async (req, res) => {
   try {
     const user = await new User(req.body)
@@ -119,6 +124,71 @@ const deleteUser = async (req, res) => {
   }
 }
 
+// USER PRINCESSES
+
+const getMyPrincesses = async (req, res) => {
+  try {
+    const princesses = await MyPrincess.find()
+    return res.status(200).json({ princesses })
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
+const getMyPrincessById = async (req, res) => {
+  try {
+    const { id } = req.params
+    const princess = await MyPrincess.findById(id)
+    if (princess) {
+      return res.status(200).json({ princess })
+    }
+    return res.status(404).send('The Princess does not exist')
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
+const createMyPrincess = async (req, res) => {
+  try {
+    const princess = await new MyPrincess(req.body)
+    await princess.save()
+    return res.status(201).json({
+      princess
+    })
+  } catch (error) {
+    return res.status(500).json({ error: error.message })
+  }
+}
+
+const updateMyPrincess = async (req, res) => {
+  console.log(req.body)
+  try {
+    const princess = await MyPrincess.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      {
+        new: true
+      }
+    )
+    res.status(200).json(princess)
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
+const deleteMyPrincess = async (req, res) => {
+  try {
+    const { id } = req.params
+    const deleted = await MyPrincess.findByIdAndDelete(id)
+    if (deleted) {
+      return res.status(200).send('Princess deleted')
+    }
+    throw new Error('Princess not found')
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 module.exports = {
   createPrincess,
   getAllPrincesses,
@@ -129,5 +199,10 @@ module.exports = {
   getAllUsers,
   getUserById,
   updateUser,
-  deleteUser
+  deleteUser,
+  createMyPrincess,
+  getMyPrincesses,
+  getMyPrincessById,
+  updateMyPrincess,
+  deleteMyPrincess
 }

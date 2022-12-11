@@ -1,6 +1,7 @@
 const { Router } = require('express')
 const controllers = require('../controllers')
 const router = Router()
+const middleware = require('../middleware')
 
 router.get('/', (req, res) => res.send('Root!!'))
 
@@ -18,10 +19,51 @@ router.get('/users', controllers.getAllUsers)
 
 router.get('/users/:id', controllers.getUserById)
 
-router.put('/users/:id', controllers.updateUser)
+router.put(
+  '/users/:id',
+  middleware.stripToken,
+  middleware.verifyToken,
+  controllers.updateUser
+)
 
-router.delete('/users/:id', controllers.deleteUser)
+router.delete(
+  '/users/:id',
+  middleware.stripToken,
+  middleware.verifyToken,
+  controllers.deleteUser
+)
 
 router.post('/users', controllers.createUser)
+
+router.get(
+  '/myprincesses',
+  middleware.stripToken,
+  middleware.verifyToken,
+  controllers.getMyPrincesses
+)
+router.get(
+  '/myprincesses/:id',
+  middleware.stripToken,
+  middleware.verifyToken,
+  controllers.getMyPrincessById
+)
+router.post(
+  '/myprincessess',
+  middleware.stripToken,
+  middleware.verifyToken,
+  controllers.createMyPrincess
+)
+router.put(
+  '/myprincesses/:id',
+  middleware.stripToken,
+  middleware.verifyToken,
+  controllers.updateMyPrincess
+)
+router.delete(
+  '/myprincesses/:id',
+  middleware.stripToken,
+  middleware.verifyToken,
+  controllers.deleteMyPrincess
+)
 
 module.exports = router
