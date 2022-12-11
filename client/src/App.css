@@ -54,7 +54,12 @@
 }
 
 .createForm {
-  width: 500px;
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .princessCreation {
@@ -68,4 +73,5 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 90px;
 }

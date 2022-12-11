@@ -18,6 +18,16 @@ const hairs = [
     name: 'Tiana',
     shape: 'https://i.imgur.com/qQ6n6HW.jpg',
     url: 'https://i.imgur.com/pFdHpkP.png'
+  },
+  {
+    name: 'Jasmine',
+    shape: 'https://i.imgur.com/8JFJE7E.jpg',
+    url: 'https://i.imgur.com/z2m5ICi.png'
+  },
+  {
+    name: 'Belle',
+    shape: 'https://i.imgur.com/6FLSH5Y.jpg',
+    url: 'https://i.imgur.com/gFySTyx.png'
   }
 ]
 
