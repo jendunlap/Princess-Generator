@@ -25,14 +25,14 @@ const LoginForm = ({ setUser }) => {
       <form className="loginForm" onSubmit={handleSubmit}>
         <input
           className="input"
-          placeholder="Email"
+          placeholder="EMAIL"
           onChange={handleChange}
           value={formValues.email}
           name="email"
         />
         <input
           className="input"
-          placeholder="Password"
+          placeholder="PASSWORD"
           onChange={handleChange}
           value={formValues.password}
           name="password"
@@ -40,6 +40,7 @@ const LoginForm = ({ setUser }) => {
         <button
           disabled={!formValues.email || !formValues.password}
           className="loginButton"
+          onClick={handleSubmit}
         >
           Login
         </button>

@@ -27,6 +27,7 @@ function App() {
 
   return (
     <div className="App">
+      {/* {window.location.pathname === '/' ? null : <Nav />} */}
       <Nav />
       <main>
         <Routes>

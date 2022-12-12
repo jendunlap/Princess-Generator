@@ -20,21 +20,15 @@ const Login = ({ setUser }) => {
         {isVisible ? (
           <div className="homeLogin">
             <LoginForm setUser={setUser} />
-            <div className="registerInstead">
-              <h3 className="homeOption">Need to create an account?</h3>
-            </div>
             <button className="homeButton" onClick={handleLogin}>
-              Create
+              Need to create an account?
             </button>
           </div>
         ) : (
           <div className="homeRegister">
             <RegisterForm setIsVisible={setIsVisible} />
-            <div className="loginInstead">
-              <h3 className="homeOption">Already have an account?</h3>
-            </div>
             <button className="homeButton" onClick={handleRegister}>
-              Create
+              Already have an account?
             </button>
           </div>
         )}

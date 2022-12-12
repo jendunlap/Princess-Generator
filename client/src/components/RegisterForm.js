@@ -30,50 +30,55 @@ const RegisterForm = ({ setIsVisible }) => {
 
   return (
     <div className="register">
-      <form className="registerForm" onSubmit={createUser}>
-        <input
-          className="input"
-          placeholder="Your Name"
-          onChange={handleChange}
-          value={newUser.name}
-          name="name"
-        />
-        <input
-          className="input"
-          placeholder="Choose Username"
-          onChange={handleChange}
-          value={newUser.username}
-          name="username"
-        />
-        <input
-          className="input"
-          placeholder="Email"
-          onChange={handleChange}
-          value={newUser.email}
-          name="email"
-        />
-        <input
-          className="input"
-          placeholder="Password"
-          onChange={handleChange}
-          value={newUser.password}
-          name="password"
-        />
-        <input
+      <form className="registerForm">
+        <div>
+          <input
+            className="input"
+            placeholder="NAME"
+            onChange={handleChange}
+            value={newUser.name}
+            name="name"
+          />
+          <input
+            className="input"
+            placeholder="USERNAME"
+            onChange={handleChange}
+            value={newUser.username}
+            name="username"
+          />
+        </div>
+        <div>
+          <input
+            className="input"
+            placeholder="EMAIL"
+            onChange={handleChange}
+            value={newUser.email}
+            name="email"
+          />
+          <input
+            className="input"
+            placeholder="PASSWORD"
+            onChange={handleChange}
+            value={newUser.password}
+            name="password"
+          />
+        </div>
+        {/* <input
           className="input"
           placeholder="Confirm Password"
           onChange={handleChange}
           value={newUser.confirmPassword}
           name="confirmPassword"
-        />
+        /> */}
         <button
+          className="registerButton"
           disabled={
             (!newUser.email,
             !newUser.name,
             !newUser.password,
-            !newUser.confirmPassword) ||
-            newUser.confirmPassword !== newUser.password
+            !newUser.confirmPassword)
           }
+          onSubmit={createUser}
         >
           Create Account
         </button>

@@ -2,6 +2,76 @@
   text-align: center;
 }
 
+.home {
+  background-image: url('https://i.imgur.com/rVxNALE.jpg');
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: -30px;
+  font-family: 'Archivo Narrow', sans-serif;
+}
+
+.homeHeader {
+  color: white;
+  margin: 250px 0 0 0;
+  font-family: 'Mouse Memoirs', sans-serif;
+  font-size: 100px;
+}
+
+.loginRegister {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginButton, .registerButton {
+  width: 325px;
+  border-radius: 50px;
+  height: 50px;
+  margin: 50px 0 0 0;
+  background-color: #99935c;
+  border: none;
+  color: white;
+  font-family: 'Mouse Memoirs', sans-serif;
+  font-size: 40px;
+}
+
+.loginForm, .registerForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  width: 300px;
+  color: white;
+}
+
+.input {
+  width: 300px;
+  height: 30px;
+  padding: 10px 0 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0f111ba2;
+  font-family: 'Archivo Narrow', sans-serif;
+  color: white;
+}
+
+::placeholder {
+  color: white;
+}
+
+.homeButton {
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  font-family: 'Archivo Narrow', sans-serif;
+  color: white;
+  /* width: 325px; */
+  margin: 5px 0 0 0;
+}
+
 /* PRINCESS.JS */
 
 .princessPortrait {
