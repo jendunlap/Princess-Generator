@@ -48,7 +48,7 @@ router.get(
   controllers.getMyPrincessById
 )
 router.post(
-  '/myprincessess',
+  '/myprincesses',
   middleware.stripToken,
   middleware.verifyToken,
   controllers.createMyPrincess

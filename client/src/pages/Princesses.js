@@ -27,6 +27,7 @@ const Princesses = () => {
     <div className="princessGrid">
       {princesses
         .filter((princess) => princess.base === true)
+        .sort((a, b) => a.name.localeCompare(b.name))
         .map((princess) => (
           <div className="princessGridCard">
             <Princess

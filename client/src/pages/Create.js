@@ -7,6 +7,7 @@ import eyeColors from '../images/eyeColors.js'
 import lips from '../images/lips.js'
 import hairs from '../images/hairs.js'
 import dresses from '../images/dresses.js'
+import Client from '../services/api'
 
 const Create = () => {
   let navigate = useNavigate()
@@ -33,15 +34,15 @@ const Create = () => {
   const [selectedHairs, setSelectedHairs] = useState(false)
   const [selectingDress, setSelectingDress] = useState(false)
   const [selectedDress, setSelectedDress] = useState(false)
-  console.log(formState)
 
   const selectSkin = (skins) => {
     let tempState = { ...formState, skin: skins.url }
     setFormState(tempState)
     setSelectingSkin(false)
   }
-  const selectEyeColor = (eyeColors) => {
+  const selectEyeColor = (eyeColors, eyes) => {
     setSelectedEyeColor(eyeColors.url)
+    setSelectedEyes()
   }
   const selectEyes = (eyes) => {
     let tempState = { ...formState, eyes: eyes.url }
@@ -70,7 +71,7 @@ const Create = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await axios.post('http://localhost:3001/princesses', formState)
+    await Client.post('http://localhost:3001/myprincesses', formState)
     navigate('/gallery')
   }
 

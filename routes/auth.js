@@ -13,4 +13,11 @@ router.put(
   controller.UpdatePassword
 )
 
+router.get(
+  '/session',
+  middleware.stripToken,
+  middleware.verifyToken,
+  controller.CheckSession
+)
+
 module.exports = router

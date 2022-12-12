@@ -7,6 +7,7 @@ import eyeColors from '../images/eyeColors.js'
 import lips from '../images/lips.js'
 import hairs from '../images/hairs.js'
 import dresses from '../images/dresses.js'
+import Client from '../services/api.js'
 
 const Modify = () => {
   let { princessId } = useParams()
@@ -71,7 +72,10 @@ const Modify = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await axios.put(`http://localhost:3001/princesses/${princessId}`, formState)
+    await Client.put(
+      `http://localhost:3001/myprincesses/${princessId}`,
+      formState
+    )
     navigate('/gallery')
   }
 
@@ -81,8 +85,8 @@ const Modify = () => {
 
   useEffect(() => {
     const getPrincessInfo = async () => {
-      const response = await axios.get(
-        `http://localhost:3001/princesses/${princessId}`
+      const response = await Client.get(
+        `http://localhost:3001/myprincesses/${princessId}`
       )
       setFormState(response.data.princess)
     }

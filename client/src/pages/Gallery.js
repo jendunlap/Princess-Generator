@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
 import Princess from '../components/Princess'
+import Client from '../services/api'
 
 const Gallery = () => {
   const [princesses, setPrincesses] = useState([])
@@ -10,13 +11,13 @@ const Gallery = () => {
   let { princessId } = useParams()
 
   const getPrincesses = async () => {
-    const response = await axios.get(`http://localhost:3001/princesses`)
+    const response = await Client.get(`http://localhost:3001/myprincesses`)
     setPrincesses(response.data.princesses)
     console.log(response.data.princesses)
   }
 
   const viewPrincess = (id) => {
-    navigate(`/princesses/${id}`)
+    navigate(`/myprincesses/${id}`)
   }
 
   useEffect(() => {

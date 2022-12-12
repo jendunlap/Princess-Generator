@@ -25,8 +25,6 @@ function App() {
     }
   }, [])
 
-  let userId = localStorage.getItem('id')
-
   return (
     <div className="App">
       <Nav />
@@ -37,6 +35,7 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/princesses" element={<Princesses />} />
           <Route path="/princesses/:princessId" element={<PrincessInfo />} />
+          <Route path="/myprincesses/:princessId" element={<PrincessInfo />} />
           <Route path="/modify/:princessId" element={<Modify />} />
         </Routes>
       </main>

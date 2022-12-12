@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import Client from '../services/api'
 
 const PrincessInfo = () => {
   let { princessId } = useParams()
@@ -8,19 +9,24 @@ const PrincessInfo = () => {
   const [princessInfo, setPrincessInfo] = useState(null)
 
   const getPrincessInfo = async () => {
-    const response = await axios.get(
-      `http://localhost:3001/princesses/${princessId}`
-    )
-    console.log(princessInfo)
-
-    setPrincessInfo(response.data.princess)
+    try {
+      const response = await Client.get(
+        `http://localhost:3001/myprincesses/${princessId}`
+      )
+      setPrincessInfo(response.data.princess)
+    } catch {
+      const response = await axios.get(
+        `http://localhost:3001/princesses/${princessId}`
+      )
+      setPrincessInfo(response.data.princess)
+    }
   }
 
   let navigate = useNavigate()
 
   const deletePrincess = async () => {
-    await axios.delete(`http://localhost:3001/princesses/${princessId}`)
-    navigate(`/myprincesses`)
+    await Client.delete(`http://localhost:3001/myprincesses/${princessId}`)
+    navigate(`/gallery`)
   }
 
   const modifyPrincess = async () => {
