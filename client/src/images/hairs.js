@@ -28,6 +28,16 @@ const hairs = [
     name: 'Belle',
     shape: 'https://i.imgur.com/6FLSH5Y.jpg',
     url: 'https://i.imgur.com/gFySTyx.png'
+  },
+  {
+    name: 'Merida',
+    shape: 'https://i.imgur.com/RUmwJVA.jpg',
+    url: 'https://i.imgur.com/d7jGvY3.png'
+  },
+  {
+    name: 'Rapunzel',
+    shape: 'https://i.imgur.com/jF1vOAv.png',
+    url: 'https://i.imgur.com/EpDA1FB.png'
   }
 ]
 

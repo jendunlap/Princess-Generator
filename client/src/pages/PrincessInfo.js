@@ -35,21 +35,62 @@ const PrincessInfo = () => {
     <div className="princessInfo">
       {princessInfo ? (
         <div className="viewInfo">
-          <h1>{princessInfo.name}</h1>
+          <div className="princessInfoPortrait">
+            <img
+              className="princessInfoPortraitComponent"
+              src={princessInfo.skin}
+            />
+
+            <img
+              className="princessInfoPortraitComponent"
+              src={princessInfo.eyes}
+            />
+
+            <img
+              className="princessInfoPortraitComponent"
+              src={princessInfo.mouth}
+            />
+
+            <img
+              className="princessInfoPortraitComponent"
+              src={princessInfo.hair}
+            />
+
+            <img
+              className="princessInfoPortraitComponent"
+              src={princessInfo.dress}
+            />
+            <img
+              className="princessInfoPortraitComponent"
+              src={princessInfo.accessories[0]}
+            />
+            <img
+              className="princessInfoPortraitComponent"
+              src={princessInfo.accessories[1]}
+            />
+            <img
+              className="princessInfoPortraitComponent"
+              src={princessInfo.accessories[2]}
+            />
+          </div>
+          <div className="princessInfoText">
+            <h1>{princessInfo.name}</h1>
+            <p>{princessInfo.description}</p>
+          </div>
+          {princessInfo.base ? null : (
+            <div>
+              <section className="buttons">
+                <button className="modificationButton" onClick={deletePrincess}>
+                  delete
+                </button>
+                <button className="modificationButton" onClick={modifyPrincess}>
+                  modify
+                </button>
+              </section>
+            </div>
+          )}
         </div>
       ) : null}
-      {/* {princessInfo.base ? null : ( */}
-      <div>
-        <section className="buttons">
-          <button className="modificationButton" onClick={deletePrincess}>
-            delete
-          </button>
-          <button className="modificationButton" onClick={modifyPrincess}>
-            modify
-          </button>
-        </section>
-      </div>
-      {/* )} */}
     </div>
   )
 }

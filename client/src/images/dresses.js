@@ -28,6 +28,16 @@ const dresses = [
     name: 'Belle',
     shape: 'https://i.imgur.com/dMmeo56.jpg',
     url: 'https://i.imgur.com/T2D3c4J.png'
+  },
+  {
+    name: 'Merida',
+    shape: 'https://i.imgur.com/LWYEPd7.jpeg',
+    url: 'https://i.imgur.com/51vOMmR.png'
+  },
+  {
+    name: 'Rapunzel',
+    shape: 'https://i.imgur.com/ej4Ttl2.png',
+    url: 'https://i.imgur.com/oCFBd06.png'
   }
 ]
 

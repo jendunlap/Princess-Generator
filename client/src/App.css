@@ -75,3 +75,37 @@
   align-items: center;
   margin: 0 90px;
 }
+
+/* PRINCESS INFO */
+
+.princessInfo {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+}
+
+.viewInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.princessInfoPortrait {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 700px;
+}
+
+.princessInfoPortraitComponent {
+  position: absolute;
+  top: 0;
+  margin: 50px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

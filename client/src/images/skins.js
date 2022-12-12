@@ -1,5 +1,10 @@
 const skins = [
   {
+    name: 'Merida',
+    color: 'https://i.imgur.com/PJ3yOh8.png',
+    url: 'https://i.imgur.com/G5Wm3o0.png'
+  },
+  {
     name: 'Belle',
     color: 'https://i.imgur.com/8O57diZ.jpg',
     url: 'https://i.imgur.com/qQ0v2g0.png'

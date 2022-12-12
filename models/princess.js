@@ -12,7 +12,8 @@ const Princess = new Schema(
     accessories: [{ type: String, required: false }],
     background: { type: String, required: false },
     frame: { type: String, required: false },
-    base: { type: Boolean }
+    base: { type: Boolean },
+    description: { type: String, required: false }
   },
   { timestamps: true }
 )
