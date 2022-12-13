@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import axios from 'axios'
-import Client from '../services/api.js'
+import * as Client from '../services/api.js'
 
 const PrincessInfo = () => {
   let { princessId } = useParams()
