@@ -66,13 +66,13 @@ const RegisterForm = ({ setIsVisible }) => {
             name="password"
           />
         </div>
-        {/* <input
+        <input
           className="input"
           placeholder="Confirm Password"
           onChange={handleChange}
           value={newUser.confirmPassword}
           name="confirmPassword"
-        /> */}
+        />
         <button
           className="registerButton"
           disabled={
