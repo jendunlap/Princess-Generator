@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import Princess from '../components/Princess'
-import * as Client from '../services/api.js'
+import Client from '../services/Taco.js'
 
 const Gallery = () => {
   const [princesses, setPrincesses] = useState([])
