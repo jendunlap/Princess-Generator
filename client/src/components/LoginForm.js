@@ -40,7 +40,6 @@ const LoginForm = ({ setUser }) => {
         <button
           disabled={!formValues.email || !formValues.password}
           className="loginButton"
-          onClick={handleSubmit}
         >
           Login
         </button>

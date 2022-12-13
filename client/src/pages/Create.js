@@ -42,7 +42,7 @@ const Create = () => {
     <div className="createPage">
       <h1 className="createHeader">CREATE your PRINCESS!</h1>
       <div className="formContainer">
-        <form className="createForm">
+        <form className="createForm" onSubmit={handleSubmit}>
           <label className="skinDiv formLabel" htmlFor="selectSkin">
             Skin Tone
           </label>
@@ -98,11 +98,7 @@ const Create = () => {
             ></input>
           </div>
           <div>
-            <button
-              className="addToGallery"
-              type="submit"
-              onClick={handleSubmit}
-            >
+            <button className="addToGallery" type="submit">
               Add to Gallery!
             </button>
           </div>
