@@ -8,6 +8,8 @@ import lips from '../images/lips.js'
 import hairs from '../images/hairs.js'
 import dresses from '../images/dresses.js'
 import Client from '../services/api'
+import SkinSelector from '../components/SkinSelector'
+import EyeSelector from '../components/EyeSelector'
 
 const Create = () => {
   let navigate = useNavigate()
@@ -15,7 +17,7 @@ const Create = () => {
   const initialState = {
     name: '',
     skin: 'https://i.imgur.com/qQ0v2g0.png',
-    eyes: '',
+    eyes: 'https://i.imgur.com/KQ6ib8I.png',
     hair: '',
     mouth: '',
     dress: '',
@@ -24,10 +26,9 @@ const Create = () => {
 
   const [formState, setFormState] = useState(initialState)
 
-  const [selectingSkin, setSelectingSkin] = useState(false)
-  const [selectedEyeColor, setSelectedEyeColor] = useState(false)
-  const [selectingEyes, setSelectingEyes] = useState(false)
-  const [selectedEyes, setSelectedEyes] = useState(false)
+  // const [selectedEyeColor, setSelectedEyeColor] = useState(false)
+  // const [selectingEyes, setSelectingEyes] = useState(false)
+  // const [selectedEyes, setSelectedEyes] = useState(false)
   const [selectingLips, setSelectingLips] = useState(false)
   const [selectedLips, setSelectedLips] = useState(false)
   const [selectingHairs, setSelectingHairs] = useState(false)
@@ -35,21 +36,16 @@ const Create = () => {
   const [selectingDress, setSelectingDress] = useState(false)
   const [selectedDress, setSelectedDress] = useState(false)
 
-  const selectSkin = (skins) => {
-    let tempState = { ...formState, skin: skins.url }
-    setFormState(tempState)
-    setSelectingSkin(false)
-  }
-  const selectEyeColor = (eyeColors, eyes) => {
-    setSelectedEyeColor(eyeColors.url)
-    setSelectedEyes()
-  }
-  const selectEyes = (eyes) => {
-    let tempState = { ...formState, eyes: eyes.url }
-    setSelectedEyes(eyes.url)
-    setFormState(tempState)
-    setSelectingEyes(false)
-  }
+  // const selectEyeColor = (eyeColors, eyes) => {
+  //   setSelectedEyeColor(eyeColors.url)
+  //   setSelectedEyes()
+  // }
+  // const selectEyes = (eyes) => {
+  //   let tempState = { ...formState, eyes: eyes.url }
+  //   setSelectedEyes(eyes.url)
+  //   setFormState(tempState)
+  //   setSelectingEyes(false)
+  // }
   const selectLips = (lips) => {
     let tempState = { ...formState, mouth: lips.url }
     setSelectedLips(lips.url)
@@ -84,214 +80,25 @@ const Create = () => {
       <h1 className="createHeader">CREATE your PRINCESS!</h1>
       <div className="formContainer">
         <form className="createForm">
-          {/* SKIN SELECTION */}
           <label className="skinDiv formLabel" htmlFor="selectSkin">
             Skin Tone
           </label>
-          {selectingSkin ? (
-            <div className="skinMap">
-              {skins.map((skin, index) => (
-                <img
-                  className="mappedSkin"
-                  key={index}
-                  src={skin.color}
-                  alt={skin.name}
-                  onClick={() => selectSkin(skin)}
-                />
-              ))}
-            </div>
-          ) : (
-            <div
-              className="selectSkinButton"
-              onClick={() => setSelectingSkin(true)}
-            >
-              {skins.map((skin, index) => (
-                <img
-                  className="mappedSkin"
-                  key={index}
-                  src={skin.color}
-                  alt={skin.name}
-                  onClick={() => selectSkin(skin)}
-                />
-              ))}
-            </div>
-          )}
+          <SkinSelector
+            skins={skins}
+            formState={formState}
+            setFormState={setFormState}
+          />
           {/* EYE SELECTION */}
           {/* COLOR */}
           <label className="eyeColorDiv formLabel" htmlFor="selectEyeColor">
             Eye Color
           </label>
-          <div className="eyeColorMap">
-            {eyeColors.map((color, index) => (
-              <img
-                className="mappedEyes"
-                key={index}
-                src={color.url}
-                alt={color.name}
-                onClick={() => selectEyeColor(color)}
-              />
-            ))}
-          </div>
-          {/* SHAPE */}
-          <label className="eyesDiv formLabel" htmlFor="selectEyes">
-            Eye Shape
-          </label>
-          {(() => {
-            switch (selectedEyeColor) {
-              case 'https://i.imgur.com/dRvr5fJ.jpg':
-                return (
-                  <div>
-                    {selectingEyes ? (
-                      <div className="eyeMap">
-                        {eyes
-                          .filter((eye) => eye.color === 'blue')
-                          .map((eye, index) => (
-                            <img
-                              className="mappedEyes"
-                              key={index}
-                              src={eye.shape}
-                              alt={eye.name}
-                              onClick={() => selectEyes(eye)}
-                            />
-                          ))}
-                      </div>
-                    ) : (
-                      <div
-                        className="selectEyesButton"
-                        onClick={() => setSelectingEyes(true)}
-                      >
-                        {eyes
-                          .filter((eye) => eye.color === 'blue')
-                          .map((eye, index) => (
-                            <img
-                              className="mappedEyes"
-                              key={index}
-                              src={eye.shape}
-                              alt={eye.name}
-                              onClick={() => selectEyes(eye)}
-                            />
-                          ))}
-                      </div>
-                    )}
-                  </div>
-                )
-                break
-              case 'https://i.imgur.com/A85yIBk.jpg':
-                return (
-                  <div>
-                    {selectingEyes ? (
-                      <div className="eyeMap">
-                        {eyes
-                          .filter((eye) => eye.color === 'brown')
-                          .map((eye, index) => (
-                            <img
-                              className="mappedEyes"
-                              key={index}
-                              src={eye.shape}
-                              alt={eye.name}
-                              onClick={() => selectEyes(eye)}
-                            />
-                          ))}
-                      </div>
-                    ) : (
-                      <div
-                        className="selectEyesButton"
-                        onClick={() => setSelectingEyes(true)}
-                      >
-                        {eyes
-                          .filter((eye) => eye.color === 'brown')
-                          .map((eye, index) => (
-                            <img
-                              className="mappedEyes"
-                              key={index}
-                              src={eye.shape}
-                              alt={eye.name}
-                              onClick={() => selectEyes(eye)}
-                            />
-                          ))}
-                      </div>
-                    )}
-                  </div>
-                )
-                break
-              case 'https://i.imgur.com/VBxd5ET.jpg':
-                return (
-                  <div>
-                    {selectingEyes ? (
-                      <div className="eyeMap">
-                        {eyes
-                          .filter((eye) => eye.color === 'gold')
-                          .map((eye, index) => (
-                            <img
-                              className="mappedEyes"
-                              key={index}
-                              src={eye.shape}
-                              alt={eye.name}
-                              onClick={() => selectEyes(eye)}
-                            />
-                          ))}
-                      </div>
-                    ) : (
-                      <div
-                        className="selectEyesButton"
-                        onClick={() => setSelectingEyes(true)}
-                      >
-                        {eyes
-                          .filter((eye) => eye.color === 'gold')
-                          .map((eye, index) => (
-                            <img
-                              className="mappedEyes"
-                              key={index}
-                              src={eye.shape}
-                              alt={eye.name}
-                              onClick={() => selectEyes(eye)}
-                            />
-                          ))}
-                      </div>
-                    )}
-                  </div>
-                )
-                break
-              default:
-                return (
-                  <div>
-                    {selectingEyes ? (
-                      <div className="eyeMap">
-                        {eyes
-                          .filter((eye) => eye.color === 'blue')
-                          .map((eye, index) => (
-                            <img
-                              className="mappedEyes"
-                              key={index}
-                              src={eye.shape}
-                              alt={eye.name}
-                              onClick={() => selectEyes(eye)}
-                            />
-                          ))}
-                      </div>
-                    ) : (
-                      <div
-                        className="selectEyesButton"
-                        onClick={() => setSelectingEyes(true)}
-                      >
-                        {eyes
-                          .filter((eye) => eye.color === 'blue')
-                          .map((eye, index) => (
-                            <img
-                              className="mappedEyes"
-                              key={index}
-                              src={eye.shape}
-                              alt={eye.name}
-                              onClick={() => selectEyes(eye)}
-                            />
-                          ))}
-                      </div>
-                    )}
-                  </div>
-                )
-                break
-            }
-          })()}
+          <EyeSelector
+            eyes={eyes}
+            eyeColors={eyeColors}
+            formState={formState}
+            setFormState={setFormState}
+          />
           {/* LIP SELECTION */}
 
           <label className="lipsDiv formLabel" htmlFor="selectLips">
@@ -412,14 +219,7 @@ const Create = () => {
         </form>
         <div className="princessCreation">
           <img className="princessCreationComponent" src={formState.skin} />
-          {selectedEyes ? (
-            <img className="princessCreationComponent" src={selectedEyes} />
-          ) : (
-            <img
-              className="princessCreationComponent"
-              src="https://i.imgur.com/KQ6ib8I.png"
-            />
-          )}
+          <img className="princessCreationComponent" src={formState.eyes} />
           {selectedLips ? (
             <img className="princessCreationComponent" src={selectedLips} />
           ) : (
