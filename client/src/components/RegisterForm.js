@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import { Register } from '../services/Auth'
+import { useNavigate } from 'react-router-dom'
 
 const RegisterForm = ({ setIsVisible }) => {
+  let navigate = useNavigate()
   let initialState = {
     name: '',
     username: '',
@@ -26,6 +28,7 @@ const RegisterForm = ({ setIsVisible }) => {
     })
     setNewUser(initialState)
     setIsVisible(true)
+    navigate('/')
   }
 
   return (
