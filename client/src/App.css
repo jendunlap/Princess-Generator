@@ -2,14 +2,17 @@
   text-align: center;
 }
 
+body {
+margin: 0;
+}
+
 .home {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Archivo Narrow', sans-serif;
   background-image: url('https://i.imgur.com/rVxNALE.jpg');
   background-size: cover;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  margin: -30px;
-  font-family: 'Archivo Narrow', sans-serif;
 }
 
 .homeHeader {
@@ -30,7 +33,7 @@
   width: 325px;
   border-radius: 50px;
   height: 50px;
-  margin: 50px 0 0 0;
+  margin: 30px 0 0 0;
   background-color: #99935c;
   border: none;
   color: white;
@@ -68,7 +71,6 @@
   background-color: rgba(255, 255, 255, 0);
   font-family: 'Archivo Narrow', sans-serif;
   color: white;
-  /* width: 325px; */
   margin: 5px 0 0 0;
 }
 
@@ -115,6 +117,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color:#0f111b;
 }
 
 .mappedSkin, .mappedEyes, .mappedLips, .mappedHairs, .mappedDresses {

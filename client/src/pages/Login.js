@@ -15,7 +15,7 @@ const Login = ({ setUser }) => {
 
   return (
     <div className="home">
-      <h1 className="homeHeader">PRINCESS TIME!!@</h1>
+      <h1 className="homeHeader">PRINCESS TIME!</h1>
       <div className="loginRegister">
         {isVisible ? (
           <div className="homeLogin">
