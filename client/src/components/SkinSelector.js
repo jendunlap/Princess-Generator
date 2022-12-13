@@ -1,4 +1,3 @@
-import skins from '../images/skins'
 import { useState } from 'react'
 
 const SkinSelector = ({ skins, formState, setFormState }) => {

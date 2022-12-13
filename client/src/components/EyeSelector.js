@@ -1,5 +1,3 @@
-import eyes from '../images/eyes'
-import eyeColors from '../images/eyeColors'
 import { useState } from 'react'
 
 const EyeSelector = ({ eyes, eyeColors, formState, setFormState }) => {
@@ -9,7 +7,6 @@ const EyeSelector = ({ eyes, eyeColors, formState, setFormState }) => {
 
   const selectEyeColor = (eyeColors, eyes) => {
     setSelectedEyeColor(eyeColors.url)
-    setSelectedEyes()
   }
   const selectEyes = (eyes) => {
     let tempState = { ...formState, eyes: eyes.url }
