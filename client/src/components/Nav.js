@@ -4,19 +4,23 @@ const Nav = () => {
   return (
     <header className="navBar">
       {window.location.pathname === '/' ? null : (
-        <nav>
-          <Link to="/" className="headerLink">
-            Home
-          </Link>
-          <Link to="/create" className="headerLink">
-            Create
-          </Link>
-          <Link to="/gallery" className="headerLink">
-            Gallery
-          </Link>
-          <Link to="/princesses" className="headerLink">
-            Princesses
-          </Link>
+        <nav className="nav">
+          <div>
+            <Link to="/" className="headerLink">
+              Home
+            </Link>
+          </div>
+          <div>
+            <Link to="/create" className="headerLink">
+              Create
+            </Link>
+            <Link to="/gallery" className="headerLink">
+              Gallery
+            </Link>
+            <Link to="/princesses" className="headerLink">
+              Princesses
+            </Link>
+          </div>
         </nav>
       )}
     </header>

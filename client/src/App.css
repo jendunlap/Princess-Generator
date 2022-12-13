@@ -4,13 +4,14 @@
 
 body {
 margin: 0;
+background-color:#0f111b;
 }
 
 .home {
   display: flex;
   flex-direction: column;
   font-family: 'Archivo Narrow', sans-serif;
-  background-image: url('https://i.imgur.com/rVxNALE.jpg');
+  background-image: url('https://i.imgur.com/4VitCNT.jpg');
   background-size: cover;
   height: 100vh;
 }
@@ -74,6 +75,29 @@ margin: 0;
   margin: 5px 0 0 0;
 }
 
+/* NAV */
+
+.headerLink {
+  text-decoration: none;
+  color: white;
+  font-family: 'Mouse Memoirs', sans-serif;
+  font-size: 25px;
+  padding: 0 10px;
+}
+
+.navBar {
+  /* height: 40px; */
+  background-color: #99935c;
+  /* padding: 8px 20px 0 20px; */
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
 /* PRINCESS.JS */
 
 .princessPortrait {
@@ -110,14 +134,18 @@ margin: 0;
 }
 
 /* CREATE.JS */
+.createHeader {
+  font-family: 'Mouse Memoirs', sans-serif;
+  font-size: 100px;
+  color: white;
+  margin: 0px;
+}
 .createPage {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color:#0f111b;
+  /* height: 90vh; */
 }
 
 .mappedSkin, .mappedEyes, .mappedLips, .mappedHairs, .mappedDresses {
@@ -126,27 +154,50 @@ margin: 0;
   border-radius: 50px;
 }
 
-.createForm {
-  width: 300px;
+.formContainer {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.createForm {
+  width: 400px;
+  /* height: 580px; */
+  overflow-y: auto;
+  display: flex;
+  /* flex-wrap: wrap; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: white;
+  /* text-align: left; */
+}
+
+.formLabel {
+  text-align: left;
+  width: 400px;
 }
 
 .princessCreation {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 500px;
+  width: 700px;
 }
 .princessCreationComponent {
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 90px;
+  height: 500px;
+}
+
+.princessCreationFrame {
+  position: absolute;
+  /* width: 90.5%; */
+  height: 590px;
 }
 
 /* PRINCESS INFO */
