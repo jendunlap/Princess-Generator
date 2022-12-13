@@ -23,6 +23,7 @@ const EyeSelector = ({ eyes, eyeColors, formState, setFormState }) => {
             className="mappedEyes"
             key={index}
             src={color.url}
+            name={color.name}
             alt={color.name}
             onClick={() => selectEyeColor(color)}
           />
@@ -46,6 +47,7 @@ const EyeSelector = ({ eyes, eyeColors, formState, setFormState }) => {
                           className="mappedEyes"
                           key={index}
                           src={eye.shape}
+                          name={eye.name}
                           alt={eye.name}
                           onClick={() => selectEyes(eye)}
                         />
@@ -63,6 +65,7 @@ const EyeSelector = ({ eyes, eyeColors, formState, setFormState }) => {
                           className="mappedEyes"
                           key={index}
                           src={eye.shape}
+                          name={eye.name}
                           alt={eye.name}
                           onClick={() => selectEyes(eye)}
                         />
@@ -84,6 +87,7 @@ const EyeSelector = ({ eyes, eyeColors, formState, setFormState }) => {
                           className="mappedEyes"
                           key={index}
                           src={eye.shape}
+                          name={eye.name}
                           alt={eye.name}
                           onClick={() => selectEyes(eye)}
                         />
@@ -101,6 +105,7 @@ const EyeSelector = ({ eyes, eyeColors, formState, setFormState }) => {
                           className="mappedEyes"
                           key={index}
                           src={eye.shape}
+                          name={eye.name}
                           alt={eye.name}
                           onClick={() => selectEyes(eye)}
                         />
@@ -122,6 +127,7 @@ const EyeSelector = ({ eyes, eyeColors, formState, setFormState }) => {
                           className="mappedEyes"
                           key={index}
                           src={eye.shape}
+                          name={eye.name}
                           alt={eye.name}
                           onClick={() => selectEyes(eye)}
                         />
@@ -139,6 +145,7 @@ const EyeSelector = ({ eyes, eyeColors, formState, setFormState }) => {
                           className="mappedEyes"
                           key={index}
                           src={eye.shape}
+                          name={eye.name}
                           alt={eye.name}
                           onClick={() => selectEyes(eye)}
                         />
@@ -160,6 +167,7 @@ const EyeSelector = ({ eyes, eyeColors, formState, setFormState }) => {
                           className="mappedEyes"
                           key={index}
                           src={eye.shape}
+                          name={eye.name}
                           alt={eye.name}
                           onClick={() => selectEyes(eye)}
                         />
@@ -177,6 +185,7 @@ const EyeSelector = ({ eyes, eyeColors, formState, setFormState }) => {
                           className="mappedEyes"
                           key={index}
                           src={eye.shape}
+                          name={eye.name}
                           alt={eye.name}
                           onClick={() => selectEyes(eye)}
                         />

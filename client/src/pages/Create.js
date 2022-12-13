@@ -5,6 +5,7 @@ import eyes from '../images/eyes.js'
 import eyeColors from '../images/eyeColors.js'
 import lips from '../images/lips.js'
 import hairs from '../images/hairs.js'
+import hairColors from '../images/hairColors.js'
 import dresses from '../images/dresses.js'
 import Client from '../services/Taco.js'
 import SkinSelector from '../components/SkinSelector'
@@ -68,16 +69,15 @@ const Create = () => {
             formState={formState}
             setFormState={setFormState}
           />
-          {/* HAIR SELECTION */}
           <label className="hairDiv formLabel" htmlFor="selectHairs">
             Hair Style
           </label>
           <HairSelector
             hairs={hairs}
+            hairColors={hairColors}
             formState={formState}
             setFormState={setFormState}
           />
-          {/* DRESS SELECTION */}
           <label className="dressDiv formLabel" htmlFor="selectDress">
             Dress Style
           </label>
