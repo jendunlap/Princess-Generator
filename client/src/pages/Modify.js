@@ -8,7 +8,7 @@ import lips from '../images/lips.js'
 import hairs from '../images/hairs.js'
 import dresses from '../images/dresses.js'
 import Client from '../services/api'
-X
+
 const Modify = () => {
   let { princessId } = useParams()
   let navigate = useNavigate()
