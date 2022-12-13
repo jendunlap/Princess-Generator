@@ -33,7 +33,7 @@ const RegisterForm = ({ setIsVisible }) => {
 
   return (
     <div className="register">
-      <form className="registerForm">
+      <form className="registerForm" onSubmit={createUser}>
         <div>
           <input
             className="input"
@@ -81,7 +81,6 @@ const RegisterForm = ({ setIsVisible }) => {
             !newUser.password,
             !newUser.confirmPassword)
           }
-          onSubmit={createUser}
         >
           Create Account
         </button>
