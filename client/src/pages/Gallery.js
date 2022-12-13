@@ -10,7 +10,7 @@ const Gallery = () => {
   let { princessId } = useParams()
 
   const getPrincesses = async () => {
-    const response = await Client.get(`http://localhost:3001/myprincesses`)
+    const response = await Client.get(`/myprincesses`)
     setPrincesses(response.data.princesses)
     console.log(response.data.princesses)
   }
