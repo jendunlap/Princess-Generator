@@ -72,10 +72,7 @@ const Modify = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await Client.put(
-      `http://localhost:3001/myprincesses/${princessId}`,
-      formState
-    )
+    await Client.put(`/myprincesses/${princessId}`, formState)
     navigate('/gallery')
   }
 
@@ -85,9 +82,7 @@ const Modify = () => {
 
   useEffect(() => {
     const getPrincessInfo = async () => {
-      const response = await Client.get(
-        `http://localhost:3001/myprincesses/${princessId}`
-      )
+      const response = await Client.get(`/myprincesses/${princessId}`)
       setFormState(response.data.princess)
     }
     getPrincessInfo()

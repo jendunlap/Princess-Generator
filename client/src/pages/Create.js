@@ -30,7 +30,7 @@ const Create = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await Client.post('http://localhost:3001/myprincesses', formState)
+    await Client.post('/myprincesses', formState)
     navigate('/gallery')
   }
 

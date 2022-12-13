@@ -10,14 +10,10 @@ const PrincessInfo = () => {
 
   const getPrincessInfo = async () => {
     try {
-      const response = await Client.get(
-        `http://localhost:3001/myprincesses/${princessId}`
-      )
+      const response = await Client.get(`/myprincesses/${princessId}`)
       setPrincessInfo(response.data.princess)
     } catch {
-      const response = await axios.get(
-        `http://localhost:3001/princesses/${princessId}`
-      )
+      const response = await axios.get(`/princesses/${princessId}`)
       setPrincessInfo(response.data.princess)
     }
   }
@@ -25,7 +21,7 @@ const PrincessInfo = () => {
   let navigate = useNavigate()
 
   const deletePrincess = async () => {
-    await Client.delete(`http://localhost:3001/myprincesses/${princessId}`)
+    await Client.delete(`/myprincesses/${princessId}`)
     navigate(`/gallery`)
   }
 
