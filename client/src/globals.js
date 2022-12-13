@@ -1,1 +1,2 @@
-export const BASE_URL = 'http://localhost:3001'
+// export const BASE_URL = 'http://localhost:3001'
+export const BASE_URL = 'https://princess-generator.herokuapp.com/api'
