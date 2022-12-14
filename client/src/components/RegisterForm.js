@@ -54,6 +54,7 @@ const RegisterForm = ({ setIsVisible }) => {
           <input
             className="input"
             placeholder="EMAIL"
+            type="email"
             onChange={handleChange}
             value={newUser.email}
             name="email"
@@ -61,6 +62,7 @@ const RegisterForm = ({ setIsVisible }) => {
           <input
             className="input"
             placeholder="PASSWORD"
+            type="password"
             onChange={handleChange}
             value={newUser.password}
             name="password"
@@ -69,6 +71,7 @@ const RegisterForm = ({ setIsVisible }) => {
         <input
           className="input"
           placeholder="Confirm Password"
+          type="password"
           onChange={handleChange}
           value={newUser.confirmPassword}
           name="confirmPassword"

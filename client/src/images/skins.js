@@ -43,12 +43,12 @@ const skins = [
     name: 'Dark',
     color: 'https://i.imgur.com/tD2OgIC.jpg',
     url: 'https://i.imgur.com/5jdcXPz.png'
-  },
-  {
-    name: 'Darkest',
-    color: 'https://i.imgur.com/lD7ZmCO.jpg',
-    url: 'https://i.imgur.com/ZrzX9W0.png'
   }
+  // {
+  //   name: 'Darkest',
+  //   color: 'https://i.imgur.com/lD7ZmCO.jpg',
+  //   url: 'https://i.imgur.com/ZrzX9W0.png'
+  // }
 ]
 
 export default skins

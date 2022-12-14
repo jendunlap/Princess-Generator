@@ -139,7 +139,7 @@ background-color:#0f111b;
   font-family: 'Mouse Memoirs', sans-serif;
   font-size: 100px;
   color: white;
-  margin: 0px;
+  margin: 30px 0 0 0;
 }
 .createPage {
   display: flex;
@@ -147,6 +147,12 @@ background-color:#0f111b;
   justify-content: center;
   align-items: center;
   /* height: 90vh; */
+}
+
+.selectSkinButton, .skinMap, .eyeColorMap, .selectEyesButton, .eyeMap, .selectLipsButton, .lipMap, .selectHairsButton, .hairMap, .selectDressButton, .dressMap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: left;
 }
 
 .mappedSkin, .mappedEyes, .mappedLips, .mappedHairs, .mappedDresses {
@@ -161,19 +167,20 @@ background-color:#0f111b;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin: 50px 0 0 0;
 }
 
 .createForm {
-  width: 400px;
-  /* height: 580px; */
+  width: 548.55px;
+  height: 550.5px;
   overflow-y: auto;
   display: flex;
-  /* flex-wrap: wrap; */
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  /* text-align: left; */
+  /* align-items: center; */
+  margin: 0 50px 0 0;
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
 }
 
 .formLabel {
@@ -185,7 +192,7 @@ background-color:#0f111b;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 700px;
+  width: 580px;
 }
 .princessCreationComponent {
   position: absolute;
@@ -199,6 +206,7 @@ background-color:#0f111b;
   position: absolute;
   /* width: 90.5%; */
   height: 590px;
+  border-radius: 5px;
 }
 
 /* PRINCESS INFO */
@@ -233,4 +241,26 @@ background-color:#0f111b;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 1220px) {
+  .createHeader {
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-size: 93px;
+    color: white;
+    margin: 10px 0 0 0;
+  }
+  .formContainer {
+    margin: 15px;
+  }
+  .createForm {
+    height: 100.5px;
+    margin: 0 0 50px 0;
+  }
+
+  .princessCreation {
+    margin: 270px 0 0 0;
+  }
 }

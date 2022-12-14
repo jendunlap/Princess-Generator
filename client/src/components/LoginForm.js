@@ -33,6 +33,7 @@ const LoginForm = ({ setUser }) => {
         <input
           className="input"
           placeholder="PASSWORD"
+          type="password"
           onChange={handleChange}
           value={formValues.password}
           name="password"

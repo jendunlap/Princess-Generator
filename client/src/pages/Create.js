@@ -7,6 +7,7 @@ import lips from '../images/lips.js'
 import hairs from '../images/hairs.js'
 import hairColors from '../images/hairColors.js'
 import dresses from '../images/dresses.js'
+import dressColors from '../images/dressColors'
 import Client from '../services/Taco.js'
 import SkinSelector from '../components/SkinSelector'
 import EyeSelector from '../components/EyeSelector'
@@ -70,7 +71,7 @@ const Create = () => {
             setFormState={setFormState}
           />
           <label className="hairDiv formLabel" htmlFor="selectHairs">
-            Hair Style
+            Hair Color
           </label>
           <HairSelector
             hairs={hairs}

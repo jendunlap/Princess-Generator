@@ -30,9 +30,9 @@ const EyeSelector = ({ eyes, eyeColors, formState, setFormState }) => {
         ))}
       </div>
       {/* SHAPE */}
-      <label className="eyesDiv formLabel" htmlFor="selectEyes">
+      {/* <label className="eyesDiv formLabel" htmlFor="selectEyes">
         Eye Shape
-      </label>
+      </label> */}
       {(() => {
         switch (selectedEyeColor) {
           case 'https://i.imgur.com/dRvr5fJ.jpg':

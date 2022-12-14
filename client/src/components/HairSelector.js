@@ -37,9 +37,9 @@ export const HairSelector = ({
         ))}
       </div>
       {/* SHAPE */}
-      <label className="hairDiv formLabel" htmlFor="selectHair">
+      {/* <label className="hairDiv formLabel" htmlFor="selectHair">
         Hair Style
-      </label>
+      </label> */}
       {(() => {
         switch (selectedHairColor) {
           case 'https://i.imgur.com/xbfkL0x.jpg':
