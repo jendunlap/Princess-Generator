@@ -11,7 +11,7 @@ export const HairSelector = ({
   const [selectingHairs, setSelectingHairs] = useState(false)
   const [selectedHair, setSelectedHair] = useState({
     color: 'blonde',
-    colorUrl: 'https://i.imgur.com/sKxkwY4.jpg',
+    colorUrl: 'https://i.imgur.com/xbfkL0x.jpg',
     shape: 'Rapunzel',
     shapeUrl: 'https://i.imgur.com/pPdKvqC.png'
   })
