@@ -84,6 +84,7 @@ const Create = () => {
           </label>
           <DressSelector
             dresses={dresses}
+            dressColors={dressColors}
             formState={formState}
             setFormState={setFormState}
           />

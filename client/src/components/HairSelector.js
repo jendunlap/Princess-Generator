@@ -43,10 +43,10 @@ export const HairSelector = ({
 
   return (
     <div>
-      <div className="eyeColorMap">
+      <div className="hairColorMap">
         {hairColors.map((color, index) => (
           <img
-            className="mappedEyes"
+            className="mappedHair"
             key={index}
             src={color.url}
             name={color.name}
@@ -70,7 +70,7 @@ export const HairSelector = ({
                       .filter((hair) => hair.color === 'blonde')
                       .map((hair, index) => (
                         <img
-                          className="mappedHairs"
+                          className="mappedHair"
                           key={index}
                           src={hair.shape}
                           name={hair.name}
@@ -88,7 +88,7 @@ export const HairSelector = ({
                       .filter((hair) => hair.color === 'blonde')
                       .map((hair, index) => (
                         <img
-                          className="mappedHairs"
+                          className="mappedHair"
                           key={index}
                           src={hair.shape}
                           name={hair.name}
@@ -110,7 +110,7 @@ export const HairSelector = ({
                       .filter((hair) => hair.color === 'gold')
                       .map((hair, index) => (
                         <img
-                          className="mappedHairs"
+                          className="mappedHair"
                           key={index}
                           src={hair.shape}
                           name={hair.name}
@@ -128,7 +128,7 @@ export const HairSelector = ({
                       .filter((hair) => hair.color === 'gold')
                       .map((hair, index) => (
                         <img
-                          className="mappedHairs"
+                          className="mappedHair"
                           key={index}
                           src={hair.shape}
                           name={hair.name}
@@ -150,7 +150,7 @@ export const HairSelector = ({
                       .filter((hair) => hair.color === 'orange')
                       .map((hair, index) => (
                         <img
-                          className="mappedHairs"
+                          className="mappedHair"
                           key={index}
                           src={hair.shape}
                           name={hair.name}
@@ -168,7 +168,7 @@ export const HairSelector = ({
                       .filter((hair) => hair.color === 'orange')
                       .map((hair, index) => (
                         <img
-                          className="mappedHairs"
+                          className="mappedHair"
                           key={index}
                           src={hair.shape}
                           name={hair.name}
@@ -190,7 +190,7 @@ export const HairSelector = ({
                       .filter((hair) => hair.color === 'red')
                       .map((hair, index) => (
                         <img
-                          className="mappedHairs"
+                          className="mappedHair"
                           key={index}
                           src={hair.shape}
                           name={hair.name}
@@ -208,7 +208,7 @@ export const HairSelector = ({
                       .filter((hair) => hair.color === 'red')
                       .map((hair, index) => (
                         <img
-                          className="mappedHairs"
+                          className="mappedHair"
                           key={index}
                           src={hair.shape}
                           name={hair.name}
@@ -230,7 +230,7 @@ export const HairSelector = ({
                       .filter((hair) => hair.color === 'lightbrown')
                       .map((hair, index) => (
                         <img
-                          className="mappedHairs"
+                          className="mappedHair"
                           key={index}
                           src={hair.shape}
                           name={hair.name}
@@ -248,7 +248,7 @@ export const HairSelector = ({
                       .filter((hair) => hair.color === 'lightbrown')
                       .map((hair, index) => (
                         <img
-                          className="mappedHairs"
+                          className="mappedHair"
                           key={index}
                           src={hair.shape}
                           name={hair.name}
@@ -270,7 +270,7 @@ export const HairSelector = ({
                       .filter((hair) => hair.color === 'brown')
                       .map((hair, index) => (
                         <img
-                          className="mappedHairs"
+                          className="mappedHair"
                           key={index}
                           src={hair.shape}
                           name={hair.name}
@@ -288,7 +288,7 @@ export const HairSelector = ({
                       .filter((hair) => hair.color === 'brown')
                       .map((hair, index) => (
                         <img
-                          className="mappedHairs"
+                          className="mappedHair"
                           key={index}
                           src={hair.shape}
                           name={hair.name}
@@ -310,7 +310,7 @@ export const HairSelector = ({
                       .filter((hair) => hair.color === 'black')
                       .map((hair, index) => (
                         <img
-                          className="mappedHairs"
+                          className="mappedHair"
                           key={index}
                           src={hair.shape}
                           name={hair.name}
@@ -328,7 +328,7 @@ export const HairSelector = ({
                       .filter((hair) => hair.color === 'black')
                       .map((hair, index) => (
                         <img
-                          className="mappedHairs"
+                          className="mappedHair"
                           key={index}
                           src={hair.shape}
                           name={hair.name}
@@ -350,7 +350,7 @@ export const HairSelector = ({
                       .filter((hair) => hair.color === 'blonde')
                       .map((hair, index) => (
                         <img
-                          className="mappedHairs"
+                          className="mappedHair"
                           key={index}
                           src={hair.shape}
                           name={hair.name}
@@ -368,7 +368,7 @@ export const HairSelector = ({
                       .filter((hair) => hair.color === 'blonde')
                       .map((hair, index) => (
                         <img
-                          className="mappedHairs"
+                          className="mappedHair"
                           key={index}
                           src={hair.shape}
                           name={hair.name}

@@ -51,97 +51,97 @@ const dresses = [
     name: 'Ariel',
     shape: 'https://i.imgur.com/etAj4Py.png',
     url: 'https://i.imgur.com/etAj4Py.png',
-    name: 'pink'
+    color: 'pink'
   },
   {
     name: 'Ariel',
     shape: 'https://i.imgur.com/2A6gDu4.png',
     url: 'https://i.imgur.com/2A6gDu4.png',
-    name: 'yellow'
+    color: 'yellow'
   },
   {
     name: 'Ariel',
     shape: 'https://i.imgur.com/0kSHCfU.png',
     url: 'https://i.imgur.com/0kSHCfU.png',
-    name: 'green'
+    color: 'green'
   },
   {
     name: 'Ariel',
     shape: 'https://i.imgur.com/JKQLJDH.png',
     url: 'https://i.imgur.com/JKQLJDH.png',
-    name: 'blue'
+    color: 'blue'
   },
   {
     name: 'Ariel',
     shape: 'https://i.imgur.com/Z5UVxPf.png',
     url: 'https://i.imgur.com/Z5UVxPf.png',
-    name: 'turquoise'
+    color: 'turquoise'
   },
   {
     name: 'Ariel',
     shape: 'https://i.imgur.com/iclNwkv.png',
     url: 'https://i.imgur.com/iclNwkv.png',
-    name: 'teal'
+    color: 'teal'
   },
   {
     name: 'Ariel',
     shape: 'https://i.imgur.com/cGukj6K.png',
     url: 'https://i.imgur.com/cGukj6K.png',
-    name: 'purple'
+    color: 'purple'
   },
   {
     name: 'Ariel',
     shape: 'https://i.imgur.com/2s8jWV9.png',
     url: 'https://i.imgur.com/2s8jWV9.png',
-    name: 'black'
+    color: 'black'
   },
   {
     name: 'Mulan',
     shape: 'https://i.imgur.com/F2lTymK.png',
     url: 'https://i.imgur.com/F2lTymK.png',
-    name: 'pink'
+    color: 'pink'
   },
   {
     name: 'Mulan',
     shape: 'https://i.imgur.com/HjObU3R.png',
     url: 'https://i.imgur.com/HjObU3R.png',
-    name: 'yellow'
+    color: 'yellow'
   },
   {
     name: 'Mulan',
     shape: 'https://i.imgur.com/zc0LQn7.png',
     url: 'https://i.imgur.com/zc0LQn7.png',
-    name: 'green'
+    color: 'green'
   },
   {
     name: 'Mulan',
     shape: 'https://i.imgur.com/2U1mml7.png',
     url: 'https://i.imgur.com/2U1mml7.png',
-    name: 'blue'
+    color: 'blue'
   },
   {
     name: 'Mulan',
     shape: 'https://i.imgur.com/68SjE3b.png',
     url: 'https://i.imgur.com/68SjE3b.png',
-    name: 'turquoise'
+    color: 'turquoise'
   },
   {
     name: 'Mulan',
     shape: 'https://i.imgur.com/01ZSfk6.png',
     url: 'https://i.imgur.com/01ZSfk6.png',
-    name: 'teal'
+    color: 'teal'
   },
   {
     name: 'Mulan',
     shape: 'https://i.imgur.com/pCKeDXW.png',
     url: 'https://i.imgur.com/pCKeDXW.png',
-    name: 'purple'
+    color: 'purple'
   },
   {
     name: 'Mulan',
     shape: 'https://i.imgur.com/ayeOs9i.png',
     url: 'https://i.imgur.com/ayeOs9i.png',
-    name: 'black'
+    color: 'black'
   },
   {
     name: 'Tiana',
