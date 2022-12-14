@@ -7,17 +7,36 @@ export const HairSelector = ({
   formState,
   setFormState
 }) => {
-  const [selectedHairColor, setSelectedHairColor] = useState(false)
+  // const [selectedHairColor, setSelectedHairColor] = useState(false)
   const [selectingHairs, setSelectingHairs] = useState(false)
-  const [selectedHairs, setSelectedHairs] = useState(false)
+  const [selectedHair, setSelectedHair] = useState({
+    color: 'blonde',
+    colorUrl: 'https://i.imgur.com/sKxkwY4.jpg',
+    shape: 'Rapunzel',
+    shapeUrl: 'https://i.imgur.com/pPdKvqC.png'
+  })
 
-  const selectHairColor = (hairColors, hairs) => {
-    setSelectedHairColor(hairColors.url)
+  const selectHairColor = (hairColor) => {
+    let tempHair = { ...selectedHair }
+    let tempState = { ...formState }
+    tempHair.color = hairColor.name
+    tempHair.colorUrl = hairColor.url
+    hairs.forEach((hair) => {
+      if (tempHair.color === hair.color && tempHair.shape === hair.name) {
+        tempHair.shapeUrl = hair.url
+        tempState.hair = hair.url
+      }
+    })
+    setSelectedHair(tempHair)
+    setFormState(tempState)
   }
 
-  const selectHairs = (hairs) => {
-    let tempState = { ...formState, hair: hairs.url }
-    setSelectedHairs(hairs.url)
+  const selectHairs = (hair) => {
+    let tempState = { ...formState, hair: hair.url }
+    let tempHair = { ...selectedHair }
+    tempHair.shapeUrl = hair.url
+    tempHair.shape = hair.name
+    setSelectedHair(tempHair)
     setFormState(tempState)
     setSelectingHairs(false)
   }
@@ -41,7 +60,7 @@ export const HairSelector = ({
         Hair Style
       </label> */}
       {(() => {
-        switch (selectedHairColor) {
+        switch (selectedHair.colorUrl) {
           case 'https://i.imgur.com/xbfkL0x.jpg':
             return (
               <div>

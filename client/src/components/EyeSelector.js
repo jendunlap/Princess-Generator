@@ -25,7 +25,6 @@ const EyeSelector = ({ eyes, eyeColors, formState, setFormState }) => {
   }
   const selectEyes = (eye) => {
     let tempState = { ...formState, eyes: eye.url }
-    // setSelectedEyes(eye.url)
     let tempEye = { ...selectedEye }
     tempEye.shapeUrl = eye.url
     tempEye.shape = eye.name

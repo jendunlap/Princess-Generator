@@ -22,7 +22,7 @@ const Create = () => {
     name: '',
     skin: 'https://i.imgur.com/qQ0v2g0.png',
     eyes: 'https://i.imgur.com/KQ6ib8I.png',
-    hair: 'https://i.imgur.com/569FUZO.png',
+    hair: 'https://i.imgur.com/pPdKvqC.png',
     mouth: 'https://i.imgur.com/AHezimP.png',
     dress: 'https://i.imgur.com/krS5MAK.png',
     base: false
@@ -87,9 +87,9 @@ const Create = () => {
             formState={formState}
             setFormState={setFormState}
           />
-          <div>
+          <div className="nameDiv">
             <label htmlFor="name" className="createPrincessName">
-              Name your Princess!
+              NAME YOUR PRINCESS!
             </label>
             <input
               onChange={handleChange}
