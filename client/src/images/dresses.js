@@ -145,28 +145,243 @@ const dresses = [
   },
   {
     name: 'Tiana',
-    shape: 'https://i.imgur.com/cFo3UFR.jpg',
-    url: 'https://i.imgur.com/2ddsGjb.png'
+    shape: 'https://i.imgur.com/WE2tXBG.png',
+    url: 'https://i.imgur.com/WE2tXBG.png',
+    color: 'pink'
+  },
+  {
+    name: 'Tiana',
+    shape: 'https://i.imgur.com/Z2EyeKh.png',
+    url: 'https://i.imgur.com/Z2EyeKh.png',
+    color: 'yellow'
+  },
+  {
+    name: 'Tiana',
+    shape: 'https://i.imgur.com/8Tgxyfs.png',
+    url: 'https://i.imgur.com/8Tgxyfs.png',
+    color: 'green'
+  },
+  {
+    name: 'Tiana',
+    shape: 'https://i.imgur.com/RVpKB5d.png',
+    url: 'https://i.imgur.com/RVpKB5d.png',
+    color: 'blue'
+  },
+  {
+    name: 'Tiana',
+    shape: 'https://i.imgur.com/XNLeZPK.png',
+    url: 'https://i.imgur.com/XNLeZPK.png',
+    color: 'turquoise'
+  },
+  {
+    name: 'Tiana',
+    shape: 'https://i.imgur.com/BR4DEla.png',
+    url: 'https://i.imgur.com/BR4DEla.png',
+    color: 'teal'
+  },
+  {
+    name: 'Tiana',
+    shape: 'https://i.imgur.com/LUkP277.png',
+    url: 'https://i.imgur.com/LUkP277.png',
+    color: 'purple'
+  },
+  {
+    name: 'Tiana',
+    shape: 'https://i.imgur.com/jFrf1jk.png',
+    url: 'https://i.imgur.com/jFrf1jk.png',
+    color: 'black'
   },
   {
     name: 'Jasmine',
-    shape: 'https://i.imgur.com/SKYzBNF.jpg',
-    url: 'https://i.imgur.com/8RHohxq.png'
+    shape: 'https://i.imgur.com/R6NE1Q0.png',
+    url: 'https://i.imgur.com/R6NE1Q0.png',
+    color: 'pink'
+  },
+  {
+    name: 'Jasmine',
+    shape: 'https://i.imgur.com/IT6wucG.png',
+    url: 'https://i.imgur.com/IT6wucG.png',
+    color: 'yellow'
+  },
+  {
+    name: 'Jasmine',
+    shape: 'https://i.imgur.com/1G3JDYY.png',
+    url: 'https://i.imgur.com/1G3JDYY.png',
+    color: 'green'
+  },
+  {
+    name: 'Jasmine',
+    shape: 'https://i.imgur.com/wYPSWSG.png',
+    url: 'https://i.imgur.com/wYPSWSG.png',
+    color: 'blue'
+  },
+  {
+    name: 'Jasmine',
+    shape: 'https://i.imgur.com/d1vuq6Y.png',
+    url: 'https://i.imgur.com/d1vuq6Y.png',
+    color: 'turquoise'
+  },
+  {
+    name: 'Jasmine',
+    shape: 'https://i.imgur.com/P5iIXkO.png',
+    url: 'https://i.imgur.com/P5iIXkO.png',
+    color: 'teal'
+  },
+  {
+    name: 'Jasmine',
+    shape: 'https://i.imgur.com/4OXPQdh.png',
+    url: 'https://i.imgur.com/4OXPQdh.png',
+    color: 'purple'
+  },
+  {
+    name: 'Jasmine',
+    shape: 'https://i.imgur.com/0n5D5Wr.png',
+    url: 'https://i.imgur.com/0n5D5Wr.png',
+    color: 'black'
   },
   {
     name: 'Belle',
-    shape: 'https://i.imgur.com/dMmeo56.jpg',
-    url: 'https://i.imgur.com/T2D3c4J.png'
+    shape: 'https://i.imgur.com/hggTtEk.png',
+    url: 'https://i.imgur.com/hggTtEk.png',
+    color: 'pink'
+  },
+  {
+    name: 'Belle',
+    shape: 'https://i.imgur.com/eE9Rze4.png',
+    url: 'https://i.imgur.com/eE9Rze4.png',
+    color: 'yellow'
+  },
+  {
+    name: 'Belle',
+    shape: 'https://i.imgur.com/ZYeM1hx.png',
+    url: 'https://i.imgur.com/ZYeM1hx.png',
+    color: 'green'
+  },
+  {
+    name: 'Belle',
+    shape: 'https://i.imgur.com/EK41SMW.png',
+    url: 'https://i.imgur.com/EK41SMW.png',
+    color: 'blue'
+  },
+  {
+    name: 'Belle',
+    shape: 'https://i.imgur.com/A8WVwHb.png',
+    url: 'https://i.imgur.com/A8WVwHb.png',
+    color: 'turquoise'
+  },
+  {
+    name: 'Belle',
+    shape: 'https://i.imgur.com/aBp4Z4Y.png',
+    url: 'https://i.imgur.com/aBp4Z4Y.png',
+    color: 'teal'
+  },
+  {
+    name: 'Belle',
+    shape: 'https://i.imgur.com/MiyOWd8.png',
+    url: 'https://i.imgur.com/MiyOWd8.png',
+    color: 'purple'
+  },
+  {
+    name: 'Belle',
+    shape: 'https://i.imgur.com/jLphtpe.png',
+    url: 'https://i.imgur.com/jLphtpe.png',
+    color: 'black'
   },
   {
     name: 'Merida',
-    shape: 'https://i.imgur.com/LWYEPd7.jpeg',
-    url: 'https://i.imgur.com/51vOMmR.png'
+    shape: 'https://i.imgur.com/eiuoGcj.png',
+    url: 'https://i.imgur.com/eiuoGcj.png',
+    color: 'pink'
+  },
+  {
+    name: 'Merida',
+    shape: 'https://i.imgur.com/H6V9h0n.png',
+    url: 'https://i.imgur.com/H6V9h0n.png',
+    color: 'yellow'
+  },
+  {
+    name: 'Merida',
+    shape: 'https://i.imgur.com/i4TU66w.png',
+    url: 'https://i.imgur.com/i4TU66w.png',
+    color: 'green'
+  },
+  {
+    name: 'Merida',
+    shape: 'https://i.imgur.com/RQ9bac9.png',
+    url: 'https://i.imgur.com/RQ9bac9.png',
+    color: 'blue'
+  },
+  {
+    name: 'Merida',
+    shape: 'https://i.imgur.com/giybTse.png',
+    url: 'https://i.imgur.com/giybTse.png',
+    color: 'turquoise'
+  },
+  {
+    name: 'Merida',
+    shape: 'https://i.imgur.com/wLXUklh.png',
+    url: 'https://i.imgur.com/wLXUklh.png',
+    color: 'teal'
+  },
+  {
+    name: 'Merida',
+    shape: 'https://i.imgur.com/Azh23Au.png',
+    url: 'https://i.imgur.com/Azh23Au.png',
+    color: 'purple'
+  },
+  {
+    name: 'Merida',
+    shape: 'https://i.imgur.com/Aj0Rn0y.png',
+    url: 'https://i.imgur.com/Aj0Rn0y.png',
+    color: 'black'
   },
   {
     name: 'Rapunzel',
-    shape: 'https://i.imgur.com/ej4Ttl2.png',
-    url: 'https://i.imgur.com/oCFBd06.png'
+    shape: 'https://i.imgur.com/wZ8fMVr.png',
+    url: 'https://i.imgur.com/wZ8fMVr.png',
+    color: 'pink'
+  },
+  {
+    name: 'Rapunzel',
+    shape: 'https://i.imgur.com/SOROe32.png',
+    url: 'https://i.imgur.com/SOROe32.png',
+    color: 'yellow'
+  },
+  {
+    name: 'Rapunzel',
+    shape: 'https://i.imgur.com/pv8hqcr.png',
+    url: 'https://i.imgur.com/pv8hqcr.png',
+    color: 'green'
+  },
+  {
+    name: 'Rapunzel',
+    shape: 'https://i.imgur.com/UnxvTA9.png',
+    url: 'https://i.imgur.com/UnxvTA9.png',
+    color: 'blue'
+  },
+  {
+    name: 'Rapunzel',
+    shape: 'https://i.imgur.com/GpC37IR.png',
+    url: 'https://i.imgur.com/GpC37IR.png',
+    color: 'turquoise'
+  },
+  {
+    name: 'Rapunzel',
+    shape: 'https://i.imgur.com/k4CUvpW.png',
+    url: 'https://i.imgur.com/k4CUvpW.png',
+    color: 'teal'
+  },
+  {
+    name: 'Rapunzel',
+    shape: 'https://i.imgur.com/Y00LAO1.png',
+    url: 'https://i.imgur.com/Y00LAO1.png',
+    color: 'purple'
+  },
+  {
+    name: 'Rapunzel',
+    shape: 'https://i.imgur.com/lwjUB0p.png',
+    url: 'https://i.imgur.com/lwjUB0p.png',
+    color: 'black'
   }
 ]
 
