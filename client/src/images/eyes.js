@@ -15,7 +15,7 @@ const eyes = [
     name: 'Cinderella',
     shape: 'https://i.imgur.com/bmNrN5J.png',
     url: 'https://i.imgur.com/dOlN1vU.png',
-    color: 'gold'
+    color: 'honey'
   },
   {
     name: 'Ariel',
@@ -33,7 +33,7 @@ const eyes = [
     name: 'Ariel',
     shape: 'https://i.imgur.com/LWL6YOx.jpg',
     url: 'https://i.imgur.com/h4hzPkF.png',
-    color: 'gold'
+    color: 'honey'
   },
   {
     name: 'Mulan',
@@ -51,13 +51,13 @@ const eyes = [
     name: 'Mulan',
     shape: 'https://i.imgur.com/3otjud8.jpg',
     url: 'https://i.imgur.com/6ELG7Xy.png',
-    color: 'gold'
+    color: 'honey'
   },
   {
     name: 'Tiana',
     shape: 'https://i.imgur.com/neyDuap.jpg',
     url: 'https://i.imgur.com/Wv1y1GZ.png',
-    color: 'gold'
+    color: 'honey'
   },
   {
     name: 'Tiana',

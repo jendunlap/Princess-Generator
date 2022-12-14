@@ -46,7 +46,7 @@ const Create = () => {
       <div className="formContainer">
         <form className="createForm" onSubmit={handleSubmit}>
           <label className="skinDiv formLabel" htmlFor="selectSkin">
-            Skin Tone
+            SELECT MELANIN
           </label>
           <SkinSelector
             skins={skins}
@@ -54,7 +54,7 @@ const Create = () => {
             setFormState={setFormState}
           />
           <label className="eyeColorDiv formLabel" htmlFor="selectEyeColor">
-            Eye Color
+            EYE COLOR & SHAPE
           </label>
           <EyeSelector
             eyes={eyes}
@@ -63,7 +63,7 @@ const Create = () => {
             setFormState={setFormState}
           />
           <label className="lipsDiv formLabel" htmlFor="selectLips">
-            Lip Shape
+            LIP COLOR & SHAPE
           </label>
           <LipSelector
             lips={lips}
@@ -71,7 +71,7 @@ const Create = () => {
             setFormState={setFormState}
           />
           <label className="hairDiv formLabel" htmlFor="selectHairs">
-            Hair Color
+            HAIR COLOR & STYLE
           </label>
           <HairSelector
             hairs={hairs}
@@ -80,7 +80,7 @@ const Create = () => {
             setFormState={setFormState}
           />
           <label className="dressDiv formLabel" htmlFor="selectDress">
-            Dress Style
+            DRESS COLOR & STYLE
           </label>
           <DressSelector
             dresses={dresses}

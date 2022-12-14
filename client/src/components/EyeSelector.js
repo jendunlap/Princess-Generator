@@ -1,16 +1,35 @@
 import { useState } from 'react'
 
 const EyeSelector = ({ eyes, eyeColors, formState, setFormState }) => {
-  const [selectedEyeColor, setSelectedEyeColor] = useState(false)
   const [selectingEyes, setSelectingEyes] = useState(false)
-  const [selectedEyes, setSelectedEyes] = useState(false)
+  const [selectedEye, setSelectedEye] = useState({
+    color: 'blue',
+    colorUrl: 'https://i.imgur.com/dRvr5fJ.jpg',
+    shape: 'Cinderella',
+    shapeUrl: 'https://i.imgur.com/KQ6ib8I.png'
+  })
 
-  const selectEyeColor = (eyeColors, eyes) => {
-    setSelectedEyeColor(eyeColors.url)
+  const selectEyeColor = (eyeColor) => {
+    let tempEye = { ...selectedEye }
+    let tempState = { ...formState }
+    tempEye.color = eyeColor.name
+    tempEye.colorUrl = eyeColor.url
+    eyes.forEach((eye) => {
+      if (tempEye.color === eye.color && tempEye.shape === eye.name) {
+        tempEye.shapeUrl = eye.url
+        tempState.eyes = eye.url
+      }
+    })
+    setSelectedEye(tempEye)
+    setFormState(tempState)
   }
-  const selectEyes = (eyes) => {
-    let tempState = { ...formState, eyes: eyes.url }
-    setSelectedEyes(eyes.url)
+  const selectEyes = (eye) => {
+    let tempState = { ...formState, eyes: eye.url }
+    // setSelectedEyes(eye.url)
+    let tempEye = { ...selectedEye }
+    tempEye.shapeUrl = eye.url
+    tempEye.shape = eye.name
+    setSelectedEye(tempEye)
     setFormState(tempState)
     setSelectingEyes(false)
   }
@@ -34,7 +53,7 @@ const EyeSelector = ({ eyes, eyeColors, formState, setFormState }) => {
         Eye Shape
       </label> */}
       {(() => {
-        switch (selectedEyeColor) {
+        switch (selectedEye.colorUrl) {
           case 'https://i.imgur.com/dRvr5fJ.jpg':
             return (
               <div>
@@ -121,7 +140,7 @@ const EyeSelector = ({ eyes, eyeColors, formState, setFormState }) => {
                 {selectingEyes ? (
                   <div className="eyeMap">
                     {eyes
-                      .filter((eye) => eye.color === 'gold')
+                      .filter((eye) => eye.color === 'honey')
                       .map((eye, index) => (
                         <img
                           className="mappedEyes"
@@ -139,7 +158,7 @@ const EyeSelector = ({ eyes, eyeColors, formState, setFormState }) => {
                     onClick={() => setSelectingEyes(true)}
                   >
                     {eyes
-                      .filter((eye) => eye.color === 'gold')
+                      .filter((eye) => eye.color === 'honey')
                       .map((eye, index) => (
                         <img
                           className="mappedEyes"
