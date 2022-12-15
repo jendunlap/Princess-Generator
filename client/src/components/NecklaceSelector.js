@@ -13,10 +13,10 @@ const NecklaceSelector = ({ necklaces, formState, setFormState }) => {
     <div>
       <div>
         {selectingNecklaces ? (
-          <div className="skinMap">
+          <div className="necklaceMap">
             {necklaces.map((necklace, index) => (
               <img
-                className="mappedSkin"
+                className="mappedNecklaces"
                 key={index}
                 src={necklace.shape}
                 alt={necklace.name}
@@ -26,12 +26,12 @@ const NecklaceSelector = ({ necklaces, formState, setFormState }) => {
           </div>
         ) : (
           <div
-            className="selectSkinButton"
+            className="selectNecklaceButton"
             onClick={() => setSelectingNecklaces(true)}
           >
             {necklaces.map((necklace, index) => (
               <img
-                className="mappedSkin"
+                className="mappedNecklaces"
                 key={index}
                 src={necklace.shape}
                 alt={necklace.name}

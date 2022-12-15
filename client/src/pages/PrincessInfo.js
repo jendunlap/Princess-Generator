@@ -40,6 +40,11 @@ const PrincessInfo = () => {
           <div className="princessInfoPortrait">
             <img
               className="princessInfoPortraitComponent"
+              src={princessInfo.background}
+            />
+
+            <img
+              className="princessInfoPortraitComponent"
               src={princessInfo.skin}
             />
 
@@ -64,19 +69,23 @@ const PrincessInfo = () => {
             />
             <img
               className="princessInfoPortraitComponent"
-              src={princessInfo.accessories[0]}
+              src={princessInfo.necklace}
             />
             <img
               className="princessInfoPortraitComponent"
-              src={princessInfo.accessories[1]}
+              src={princessInfo.earring}
             />
             <img
               className="princessInfoPortraitComponent"
-              src={princessInfo.accessories[2]}
+              src={princessInfo.crown}
             />
-            <img
+            {/* <img
               className="princessInfoFrameComponent"
               src={princessInfo.frame}
+            /> */}
+            <img
+              className="princessInfoFrameComponent"
+              src="https://i.imgur.com/jf1dRaF.png"
             />
           </div>
           <div className="princessInfoText">

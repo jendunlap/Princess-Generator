@@ -12,6 +12,7 @@ import dresses from '../images/dresses.js'
 import dressColors from '../images/dressColors'
 import earrings from '../images/earrings.js'
 import necklaces from '../images/necklaces.js'
+import backgrounds from '../images/backgrounds.js'
 import SkinSelector from '../components/SkinSelector'
 import EyeSelector from '../components/EyeSelector'
 import LipSelector from '../components/LipSelector'
@@ -19,19 +20,21 @@ import HairSelector from '../components/HairSelector'
 import DressSelector from '../components/DressSelector'
 import EarringSelector from '../components/EarringSelector'
 import NecklaceSelector from '../components/NecklaceSelector'
+import BackgroundSelector from '../components/BackgroundSelector'
 
 const Create = () => {
   let navigate = useNavigate()
 
   const initialState = {
     name: '',
-    skin: 'https://i.imgur.com/qQ0v2g0.png',
-    eyes: 'https://i.imgur.com/KQ6ib8I.png',
-    hair: 'https://i.imgur.com/pPdKvqC.png',
-    mouth: 'https://i.imgur.com/hwQXj9l.png',
-    dress: 'https://i.imgur.com/krS5MAK.png',
+    skin: '',
+    eyes: '',
+    hair: '',
+    mouth: '',
+    dress: '',
     necklace: '',
     earring: '',
+    background: '',
     base: false
   }
 
@@ -112,6 +115,14 @@ const Create = () => {
             formState={formState}
             setFormState={setFormState}
           />
+          <label className="backgroundDiv formLabel" htmlFor="selectBackground">
+            BACKGROUND
+          </label>
+          <BackgroundSelector
+            backgrounds={backgrounds}
+            formState={formState}
+            setFormState={setFormState}
+          />
           <div className="nameDiv">
             <label htmlFor="name" className="createPrincessName formLabel">
               NAME YOUR PRINCESS!
@@ -130,6 +141,10 @@ const Create = () => {
           </div>
         </form>
         <div className="princessCreation">
+          <img
+            className="princessCreationComponent"
+            src={formState.background}
+          />
           <img className="princessCreationComponent" src={formState.skin} />
           <img className="princessCreationComponent" src={formState.eyes} />
           <img className="princessCreationComponent" src={formState.mouth} />

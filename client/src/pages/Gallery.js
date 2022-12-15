@@ -24,13 +24,14 @@ const Gallery = () => {
   }, [princessId])
 
   return (
-    <div className="princessGrid">
+    <div>
       {!princesses ? (
         <h1>SOMETHING</h1>
       ) : (
-        <div>
+        <div className="princessGrid">
           {princesses
             .filter((princess) => princess.base === false)
+            .sort((a, b) => a.name.localeCompare(b.name))
             .map((princess) => (
               <div className="princessGridCard">
                 <Princess
@@ -43,7 +44,8 @@ const Gallery = () => {
                   hair={princess.hair}
                   mouth={princess.mouth}
                   dress={princess.dress}
-                  accessories={princess.accessories}
+                  necklace={princess.necklace}
+                  earring={princess.earring}
                   background={princess.background}
                   frame={princess.frame}
                   onClick={viewPrincess}

@@ -127,12 +127,13 @@ height: 100vh;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 530px;
-  padding: 20px;
+  height: 435px;
+  /* width: 300px; */
+  /* padding: 20px; */
 }
 
 .princessPortrait {
-  height: 478px;
+  height: 400px;
   width: 400px;
   margin: 20px;
   display: flex;
@@ -143,19 +144,20 @@ height: 100vh;
 
 .princessPortraitComponent {
   position: absolute;
-  height: 400px;
+  height: 315px;
+  border-radius: 5px;
 }
 
 .princessPortraitFrame {
   position: absolute;
-  height: 478px;
+  height: 375px;
 }
 
 .princessPortraitName {
-  margin: 0;
+  margin: 5px;
   width: 477px;
   font-family: 'Mouse Memoirs', sans-serif;
-  font-size: 50px;
+  font-size: 40px;
   color: white;
 }
 
@@ -168,10 +170,14 @@ height: 100vh;
   justify-content: center;
   align-items: center;
   width: 100vw;
+  margin: 15px 0 0 0;
+  /* height: 100vh;
+  overflow-y: auto;
+  position: fixed; */
 }
 
 .princessGridCard {
-  width: 477px;
+  width: 395px;
 }
 
 /* CREATE.JS */
@@ -189,13 +195,13 @@ height: 100vh;
   /* height: 90vh; */
 }
 
-.selectSkinButton, .skinMap, .eyeColorMap, .selectEyesButton, .eyeMap, .selectLipsButton, .lipColorMap, .lipMap, .hairColorMap, .selectHairsButton, .hairMap, .dressColorMap, .selectDressButton, .dressMap {
+.selectSkinButton, .skinMap, .eyeColorMap, .selectEyesButton, .eyeMap, .selectLipsButton, .lipColorMap, .lipMap, .hairColorMap, .selectHairsButton, .hairMap, .dressColorMap, .selectDressButton, .dressMap, .backgroundMap, .selectBackgroundButton, .necklaceMap, .selectNecklaceButton, .earringMap, .selectEarringButton {
   display: flex;
   flex-wrap: wrap;
   align-items: left;
 }
 
-.mappedSkin, .mappedEyes, .mappedLips, .mappedHair, .mappedDresses {
+.mappedSkin, .mappedEyes, .mappedLips, .mappedHair, .mappedDresses, .mappedBackgrounds, .mappedNecklaces, .mappedEarrings {
   margin: 5px;
   height: 50px;
   border-radius: 50px;

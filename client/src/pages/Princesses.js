@@ -40,7 +40,9 @@ const Princesses = () => {
               hair={princess.hair}
               mouth={princess.mouth}
               dress={princess.dress}
-              accessories={princess.accessories}
+              necklace={princess.necklace}
+              earring={princess.earring}
+              crown={princess.crown}
               background={princess.background}
               frame={princess.frame}
               onClick={viewPrincess}

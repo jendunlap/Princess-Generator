@@ -13,10 +13,10 @@ const EarringSelector = ({ earrings, formState, setFormState }) => {
     <div>
       <div>
         {selectingEarrings ? (
-          <div className="skinMap">
+          <div className="earringMap">
             {earrings.map((earring, index) => (
               <img
-                className="mappedSkin"
+                className="mappedEarrings"
                 key={index}
                 src={earring.shape}
                 alt={earring.name}
@@ -26,12 +26,12 @@ const EarringSelector = ({ earrings, formState, setFormState }) => {
           </div>
         ) : (
           <div
-            className="selectSkinButton"
+            className="selectEarringButton"
             onClick={() => setSelectingEarrings(true)}
           >
             {earrings.map((earring, index) => (
               <img
-                className="mappedSkin"
+                className="mappedEarrings"
                 key={index}
                 src={earring.shape}
                 alt={earring.name}
