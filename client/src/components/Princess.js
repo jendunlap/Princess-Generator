@@ -10,6 +10,7 @@ const Princess = (props) => {
         <img src={props.accessories[0]} className="princessPortraitComponent" />
         <img src={props.accessories[1]} className="princessPortraitComponent" />
         <img src={props.accessories[2]} className="princessPortraitComponent" />
+        <img src={props.frame} className="princessPortraitFrame" />
       </div>
       <h1 className="princessPortraitName">{props.name}</h1>
     </div>

@@ -4,7 +4,7 @@ import Princess from '../components/Princess'
 import Client from '../services/Taco.js'
 
 const Gallery = () => {
-  const [princesses, setPrincesses] = useState([])
+  const [princesses, setPrincesses] = useState(null)
 
   let navigate = useNavigate()
   let { princessId } = useParams()
@@ -25,27 +25,33 @@ const Gallery = () => {
 
   return (
     <div className="princessGrid">
-      {princesses
-        .filter((princess) => princess.base === false)
-        .map((princess) => (
-          <div className="princessGridCard">
-            <Princess
-              id={princess._id}
-              key={princess._id}
-              base={princess.base}
-              name={princess.name}
-              skin={princess.skin}
-              eyes={princess.eyes}
-              hair={princess.hair}
-              mouth={princess.mouth}
-              dress={princess.dress}
-              accessories={princess.accessories}
-              background={princess.background}
-              frame={princess.frame}
-              onClick={viewPrincess}
-            />
-          </div>
-        ))}
+      {!princesses ? (
+        <h1>SOMETHING</h1>
+      ) : (
+        <div>
+          {princesses
+            .filter((princess) => princess.base === false)
+            .map((princess) => (
+              <div className="princessGridCard">
+                <Princess
+                  id={princess._id}
+                  key={princess._id}
+                  base={princess.base}
+                  name={princess.name}
+                  skin={princess.skin}
+                  eyes={princess.eyes}
+                  hair={princess.hair}
+                  mouth={princess.mouth}
+                  dress={princess.dress}
+                  accessories={princess.accessories}
+                  background={princess.background}
+                  frame={princess.frame}
+                  onClick={viewPrincess}
+                />
+              </div>
+            ))}
+        </div>
+      )}
     </div>
   )
 }

@@ -74,23 +74,35 @@ const PrincessInfo = () => {
               className="princessInfoPortraitComponent"
               src={princessInfo.accessories[2]}
             />
+            <img
+              className="princessInfoFrameComponent"
+              src={princessInfo.frame}
+            />
           </div>
           <div className="princessInfoText">
-            <h1>{princessInfo.name}</h1>
-            <p>{princessInfo.description}</p>
+            <h1 className="princessInfoName">{princessInfo.name}</h1>
+            <p className="princessInfoDescription">
+              {princessInfo.description}
+            </p>
+            {princessInfo.base ? null : (
+              <div>
+                <section className="buttons">
+                  <button
+                    className="modificationButton"
+                    onClick={deletePrincess}
+                  >
+                    delete
+                  </button>
+                  <button
+                    className="modificationButton"
+                    onClick={modifyPrincess}
+                  >
+                    modify
+                  </button>
+                </section>
+              </div>
+            )}
           </div>
-          {princessInfo.base ? null : (
-            <div>
-              <section className="buttons">
-                <button className="modificationButton" onClick={deletePrincess}>
-                  delete
-                </button>
-                <button className="modificationButton" onClick={modifyPrincess}>
-                  modify
-                </button>
-              </section>
-            </div>
-          )}
         </div>
       ) : null}
     </div>
