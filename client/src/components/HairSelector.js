@@ -12,8 +12,8 @@ export const HairSelector = ({
   const [selectedHair, setSelectedHair] = useState({
     color: 'blonde',
     colorUrl: 'https://i.imgur.com/xbfkL0x.jpg',
-    shape: 'Rapunzel',
-    shapeUrl: 'https://i.imgur.com/pPdKvqC.png'
+    shape: 'Mulan',
+    shapeUrl: 'https://i.imgur.com/iP8cHs0.png'
   })
 
   const selectHairColor = (hairColor) => {
@@ -55,10 +55,6 @@ export const HairSelector = ({
           />
         ))}
       </div>
-      {/* SHAPE */}
-      {/* <label className="hairDiv formLabel" htmlFor="selectHair">
-        Hair Style
-      </label> */}
       {(() => {
         switch (selectedHair.colorUrl) {
           case 'https://i.imgur.com/xbfkL0x.jpg':

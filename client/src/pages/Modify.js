@@ -61,7 +61,7 @@ const Modify = () => {
 
   return (
     <div className="createPage">
-      <h1 className="createHeader">CREATE your PRINCESS!</h1>
+      <h1 className="createHeader">UPDATE your PRINCESS!</h1>
       <div className="formContainer">
         <form className="createForm" onSubmit={handleSubmit}>
           <label className="skinDiv formLabel" htmlFor="selectSkin">
