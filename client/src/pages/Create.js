@@ -4,6 +4,7 @@ import skins from '../images/skins.js'
 import eyes from '../images/eyes.js'
 import eyeColors from '../images/eyeColors.js'
 import lips from '../images/lips.js'
+import lipColors from '../images/lipColors.js'
 import hairs from '../images/hairs.js'
 import hairColors from '../images/hairColors.js'
 import dresses from '../images/dresses.js'
@@ -23,7 +24,7 @@ const Create = () => {
     skin: 'https://i.imgur.com/qQ0v2g0.png',
     eyes: 'https://i.imgur.com/KQ6ib8I.png',
     hair: 'https://i.imgur.com/pPdKvqC.png',
-    mouth: 'https://i.imgur.com/AHezimP.png',
+    mouth: 'https://i.imgur.com/hwQXj9l.png',
     dress: 'https://i.imgur.com/krS5MAK.png',
     base: false
   }
@@ -67,6 +68,7 @@ const Create = () => {
           </label>
           <LipSelector
             lips={lips}
+            lipColors={lipColors}
             formState={formState}
             setFormState={setFormState}
           />

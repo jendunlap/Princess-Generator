@@ -189,7 +189,7 @@ height: 100vh;
   /* height: 90vh; */
 }
 
-.selectSkinButton, .skinMap, .eyeColorMap, .selectEyesButton, .eyeMap, .selectLipsButton, .lipMap, .hairColorMap, .selectHairsButton, .hairMap, .dressColorMap, .selectDressButton, .dressMap {
+.selectSkinButton, .skinMap, .eyeColorMap, .selectEyesButton, .eyeMap, .selectLipsButton, .lipColorMap, .lipMap, .hairColorMap, .selectHairsButton, .hairMap, .dressColorMap, .selectDressButton, .dressMap {
   display: flex;
   flex-wrap: wrap;
   align-items: left;
