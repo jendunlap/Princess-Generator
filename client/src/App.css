@@ -99,6 +99,15 @@ height: 100vh;
   transition: .2s;
 }
 
+.headerLinkHome {
+  text-decoration: none;
+  color: white;
+  font-family: 'Mouse Memoirs', sans-serif;
+  font-size: 25px;
+  padding: 0 0 0 50px;
+  transition: .2s;
+}
+
 .logout {
   text-decoration: none;
   color: white;
@@ -120,22 +129,25 @@ height: 100vh;
   justify-content: space-between;
 }
 
+.navHome {
+  display: flex;
+  flex-direction: row;
+  align-items: right;
+  text-align: right;
+}
+
 /* PRINCESS.JS */
 
 .princessDiv {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  height: 435px;
-  /* width: 300px; */
-  /* padding: 20px; */
+  height: 420px;
 }
 
 .princessPortrait {
   height: 400px;
-  width: 400px;
-  margin: 20px;
+  margin: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -144,13 +156,8 @@ height: 100vh;
 
 .princessPortraitComponent {
   position: absolute;
-  height: 315px;
+  height: 350px;
   border-radius: 5px;
-}
-
-.princessPortraitFrame {
-  position: absolute;
-  height: 375px;
 }
 
 .princessPortraitName {
@@ -170,7 +177,7 @@ height: 100vh;
   justify-content: center;
   align-items: center;
   width: 100vw;
-  margin: 15px 0 0 0;
+  margin: 30px 0 0 0;
   /* height: 100vh;
   overflow-y: auto;
   position: fixed; */
