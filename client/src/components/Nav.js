@@ -15,10 +15,17 @@ const Nav = () => {
   return (
     <header className="navBar">
       {window.location.pathname === '/' ? (
-        <nav className="navHome">
-          <Link to="/princesses" className="headerLinkHome">
-            Princesses
-          </Link>
+        <nav className="nav">
+          <div>
+            <Link to="/" className="logout">
+              Sign In
+            </Link>
+          </div>
+          <div>
+            <Link to="/princesses" className="headerLink">
+              Princesses
+            </Link>
+          </div>
         </nav>
       ) : (
         <nav className="nav">

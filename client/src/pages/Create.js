@@ -27,14 +27,14 @@ const Create = () => {
 
   const initialState = {
     name: '',
-    skin: '',
-    eyes: '',
-    hair: '',
-    mouth: '',
-    dress: '',
+    skin: 'https://i.imgur.com/tbzSNHR.png',
+    eyes: 'https://i.imgur.com/K2tCb5r.png',
+    hair: 'https://i.imgur.com/N8PK8ld.png',
+    mouth: 'https://i.imgur.com/iGjv8dL.png',
+    dress: 'https://i.imgur.com/WrKxSY9.png',
     necklace: '',
     earring: '',
-    background: '',
+    background: 'https://i.imgur.com/QhMZ4FM.png',
     base: false
   }
 

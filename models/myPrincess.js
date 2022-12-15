@@ -9,7 +9,8 @@ const myPrincess = new Schema(
     hair: { type: String, required: true },
     mouth: { type: String, required: true },
     dress: { type: String, required: true },
-    accessories: [{ type: String, required: false }],
+    earring: { type: String, required: false },
+    necklace: { type: String, required: false },
     background: { type: String, required: false },
     frame: { type: String, required: false },
     base: { type: Boolean }

@@ -4,9 +4,9 @@ const EyeSelector = ({ eyes, eyeColors, formState, setFormState }) => {
   const [selectingEyes, setSelectingEyes] = useState(false)
   const [selectedEye, setSelectedEye] = useState({
     color: 'blue',
-    colorUrl: 'https://i.imgur.com/dRvr5fJ.jpg',
-    shape: 'Cinderella',
-    shapeUrl: 'https://i.imgur.com/KQ6ib8I.png'
+    colorUrl: 'https://i.imgur.com/A85yIBk.jpg',
+    shape: 'Merida',
+    shapeUrl: 'https://i.imgur.com/0ShfIli.png'
   })
 
   const selectEyeColor = (eyeColor) => {

@@ -4,7 +4,7 @@ const DressSelector = ({ dresses, dressColors, formState, setFormState }) => {
   const [selectingDress, setSelectingDress] = useState(false)
   const [selectedDress, setSelectedDress] = useState({
     color: 'blue',
-    colorUrl: 'https://i.imgur.com/vYDlGcx.jpg',
+    colorUrl: 'https://i.imgur.com/n5t5NYt.jpg',
     shape: 'Cinderella',
     shapeUrl: 'https://i.imgur.com/dz8Oml1.png'
   })

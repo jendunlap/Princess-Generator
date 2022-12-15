@@ -4,9 +4,10 @@ const middleware = require('../middleware')
 const Login = async (req, res) => {
   try {
     const user = await User.findOne({
-      where: { email: req.body.email },
-      raw: true
+      email: req.body.email
     })
+    console.log(req.body.email)
+    console.log(user)
     if (
       user &&
       (await middleware.comparePassword(user.passwordDigest, req.body.password))

@@ -4,7 +4,7 @@ const LipSelector = ({ lips, lipColors, formState, setFormState }) => {
   const [selectingLips, setSelectingLips] = useState(false)
   const [selectedLip, setSelectedLip] = useState({
     color: 'hotpink',
-    colorUrl: 'https://i.imgur.com/PI0UrNH.png',
+    colorUrl: 'https://i.imgur.com/h4rEyWg.png',
     shape: 'Cinderella',
     shapeUrl: 'https://i.imgur.com/hwQXj9l.png'
   })

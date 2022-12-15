@@ -6,7 +6,7 @@ router.post('/login', controller.Login)
 
 router.post('/register', controller.Register)
 
-router.put(
+router.post(
   '/updatepassword',
   middleware.stripToken,
   middleware.verifyToken,
