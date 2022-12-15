@@ -202,7 +202,7 @@ height: 100vh;
   background-color: #0f111b;
 }
 
-.eyeColorDiv, .lipsDiv, .hairDiv, .dressDiv, .nameDiv {
+.formLabel {
   margin: 10px;
 }
 

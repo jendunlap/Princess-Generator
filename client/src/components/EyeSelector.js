@@ -294,44 +294,7 @@ const EyeSelector = ({ eyes, eyeColors, formState, setFormState }) => {
             )
             break
           default:
-            return (
-              <div>
-                {selectingEyes ? (
-                  <div className="eyeMap">
-                    {eyes
-                      .filter((eye) => eye.color === 'blue')
-                      .map((eye, index) => (
-                        <img
-                          className="mappedEyes"
-                          key={index}
-                          src={eye.shape}
-                          name={eye.name}
-                          alt={eye.name}
-                          onClick={() => selectEyes(eye)}
-                        />
-                      ))}
-                  </div>
-                ) : (
-                  <div
-                    className="selectEyesButton"
-                    onClick={() => setSelectingEyes(true)}
-                  >
-                    {eyes
-                      .filter((eye) => eye.color === 'blue')
-                      .map((eye, index) => (
-                        <img
-                          className="mappedEyes"
-                          key={index}
-                          src={eye.shape}
-                          name={eye.name}
-                          alt={eye.name}
-                          onClick={() => selectEyes(eye)}
-                        />
-                      ))}
-                  </div>
-                )}
-              </div>
-            )
+            return <div></div>
             break
         }
       })()}
