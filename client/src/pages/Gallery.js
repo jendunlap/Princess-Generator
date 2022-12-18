@@ -25,9 +25,7 @@ const Gallery = () => {
 
   return (
     <div>
-      {!princesses ? (
-        <h1>SOMETHING</h1>
-      ) : (
+      {!princesses ? null : (
         <div className="princessGrid">
           {princesses
             .filter((princess) => princess.base === false)

@@ -7,7 +7,6 @@ export const HairSelector = ({
   formState,
   setFormState
 }) => {
-  // const [selectedHairColor, setSelectedHairColor] = useState(false)
   const [selectingHairs, setSelectingHairs] = useState(false)
   const [selectedHair, setSelectedHair] = useState({
     color: 'blonde',
