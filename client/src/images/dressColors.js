@@ -1,5 +1,6 @@
 const dressColors = [
   { name: 'pink', url: 'https://i.imgur.com/n5t5NYt.jpg' },
+  { name: 'red', url: 'https://i.imgur.com/19LZndV.jpg' },
   { name: 'yellow', url: 'https://i.imgur.com/a2NEMMv.jpg' },
   { name: 'green', url: 'https://i.imgur.com/pgsKbpd.jpg' },
   { name: 'blue', url: 'https://i.imgur.com/vYDlGcx.jpg' },

@@ -7,6 +7,12 @@ const dresses = [
   },
   {
     name: 'Cinderella',
+    shape: 'https://i.imgur.com/S7YoXzE.png',
+    url: 'https://i.imgur.com/S7YoXzE.png',
+    color: 'red'
+  },
+  {
+    name: 'Cinderella',
     shape: 'https://i.imgur.com/VjR49nt.png',
     url: 'https://i.imgur.com/VjR49nt.png',
     color: 'yellow'
@@ -52,6 +58,12 @@ const dresses = [
     shape: 'https://i.imgur.com/etAj4Py.png',
     url: 'https://i.imgur.com/etAj4Py.png',
     color: 'pink'
+  },
+  {
+    name: 'Ariel',
+    shape: 'https://i.imgur.com/pY1vz78.png',
+    url: 'https://i.imgur.com/pY1vz78.png',
+    color: 'red'
   },
   {
     name: 'Ariel',
@@ -103,6 +115,12 @@ const dresses = [
   },
   {
     name: 'Mulan',
+    shape: 'https://i.imgur.com/CPhcO3S.png',
+    url: 'https://i.imgur.com/CPhcO3S.png',
+    color: 'red'
+  },
+  {
+    name: 'Mulan',
     shape: 'https://i.imgur.com/HjObU3R.png',
     url: 'https://i.imgur.com/HjObU3R.png',
     color: 'yellow'
@@ -148,6 +166,12 @@ const dresses = [
     shape: 'https://i.imgur.com/WE2tXBG.png',
     url: 'https://i.imgur.com/WE2tXBG.png',
     color: 'pink'
+  },
+  {
+    name: 'Tiana',
+    shape: 'https://i.imgur.com/SlLB86C.png',
+    url: 'https://i.imgur.com/SlLB86C.png',
+    color: 'red'
   },
   {
     name: 'Tiana',
@@ -199,6 +223,12 @@ const dresses = [
   },
   {
     name: 'Jasmine',
+    shape: 'https://i.imgur.com/qAHmZQ0.png',
+    url: 'https://i.imgur.com/qAHmZQ0.png',
+    color: 'red'
+  },
+  {
+    name: 'Jasmine',
     shape: 'https://i.imgur.com/IT6wucG.png',
     url: 'https://i.imgur.com/IT6wucG.png',
     color: 'yellow'
@@ -244,6 +274,12 @@ const dresses = [
     shape: 'https://i.imgur.com/hggTtEk.png',
     url: 'https://i.imgur.com/hggTtEk.png',
     color: 'pink'
+  },
+  {
+    name: 'Belle',
+    shape: 'https://i.imgur.com/C0zRGiI.png',
+    url: 'https://i.imgur.com/C0zRGiI.png',
+    color: 'red'
   },
   {
     name: 'Belle',
@@ -295,6 +331,12 @@ const dresses = [
   },
   {
     name: 'Merida',
+    shape: 'https://i.imgur.com/U1PddXt.png',
+    url: 'https://i.imgur.com/U1PddXt.png',
+    color: 'red'
+  },
+  {
+    name: 'Merida',
     shape: 'https://i.imgur.com/H6V9h0n.png',
     url: 'https://i.imgur.com/H6V9h0n.png',
     color: 'yellow'
@@ -343,6 +385,12 @@ const dresses = [
   },
   {
     name: 'Rapunzel',
+    shape: 'https://i.imgur.com/k82AvUT.png',
+    url: 'https://i.imgur.com/k82AvUT.png',
+    color: 'red'
+  },
+  {
+    name: 'Rapunzel',
     shape: 'https://i.imgur.com/SOROe32.png',
     url: 'https://i.imgur.com/SOROe32.png',
     color: 'yellow'
@@ -381,6 +429,60 @@ const dresses = [
     name: 'Rapunzel',
     shape: 'https://i.imgur.com/lwjUB0p.png',
     url: 'https://i.imgur.com/lwjUB0p.png',
+    color: 'black'
+  },
+  {
+    name: 'Moana',
+    shape: 'https://i.imgur.com/TsSPsxA.png',
+    url: 'https://i.imgur.com/TsSPsxA.png',
+    color: 'pink'
+  },
+  {
+    name: 'Moana',
+    shape: 'https://i.imgur.com/bdlVb1u.png',
+    url: 'https://i.imgur.com/bdlVb1u.png',
+    color: 'red'
+  },
+  {
+    name: 'Moana',
+    shape: 'https://i.imgur.com/6816hbc.png',
+    url: 'https://i.imgur.com/6816hbc.png',
+    color: 'yellow'
+  },
+  {
+    name: 'Moana',
+    shape: 'https://i.imgur.com/hWzrq45.png',
+    url: 'https://i.imgur.com/hWzrq45.png',
+    color: 'green'
+  },
+  {
+    name: 'Moana',
+    shape: 'https://i.imgur.com/MMaTFW3.png',
+    url: 'https://i.imgur.com/MMaTFW3.png',
+    color: 'blue'
+  },
+  {
+    name: 'Moana',
+    shape: 'https://i.imgur.com/4GKBfpA.png',
+    url: 'https://i.imgur.com/4GKBfpA.png',
+    color: 'turquoise'
+  },
+  {
+    name: 'Moana',
+    shape: 'https://i.imgur.com/vg0qZkl.png',
+    url: 'https://i.imgur.com/vg0qZkl.png',
+    color: 'teal'
+  },
+  {
+    name: 'Moana',
+    shape: 'https://i.imgur.com/7J2p2TY.png',
+    url: 'https://i.imgur.com/7J2p2TY.png',
+    color: 'purple'
+  },
+  {
+    name: 'Moana',
+    shape: 'https://i.imgur.com/nRovFfc.png',
+    url: 'https://i.imgur.com/nRovFfc.png',
     color: 'black'
   }
 ]
