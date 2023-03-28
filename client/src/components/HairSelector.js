@@ -56,7 +56,7 @@ export const HairSelector = ({
       </div>
       {(() => {
         switch (selectedHair.colorUrl) {
-          case 'https://i.imgur.com/xbfkL0x.jpg':
+          case '``i`i``':
             return (
               <div>
                 {selectingHairs ? (

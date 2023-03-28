@@ -334,6 +334,48 @@ const hairs = [
     shape: 'https://i.imgur.com/1zhZNKv.png',
     url: 'https://i.imgur.com/1zhZNKv.png',
     color: 'black'
+  },
+  {
+    name: 'Moana',
+    shape: 'https://i.imgur.com/Rs2mzGQ.png',
+    url: 'https://i.imgur.com/Rs2mzGQ.png',
+    color: 'blonde'
+  },
+  {
+    name: 'Moana',
+    shape: 'https://i.imgur.com/FdxX3gt.png',
+    url: 'https://i.imgur.com/FdxX3gt.png',
+    color: 'gold'
+  },
+  {
+    name: 'Moana',
+    shape: 'https://i.imgur.com/iMtaYTF.png',
+    url: 'https://i.imgur.com/iMtaYTF.png',
+    color: 'orange'
+  },
+  {
+    name: 'Moana',
+    shape: 'https://i.imgur.com/YyUzOqv.png',
+    url: 'https://i.imgur.com/YyUzOqv.png',
+    color: 'red'
+  },
+  {
+    name: 'Moana',
+    shape: 'https://i.imgur.com/TUSclMy.png',
+    url: 'https://i.imgur.com/TUSclMy.png',
+    color: 'lightbrown'
+  },
+  {
+    name: 'Moana',
+    shape: 'https://i.imgur.com/dkNi8PP.png',
+    url: 'https://i.imgur.com/dkNi8PP.png',
+    color: 'brown'
+  },
+  {
+    name: 'Moana',
+    shape: 'https://i.imgur.com/IIBpwpk.png',
+    url: 'https://i.imgur.com/IIBpwpk.png',
+    color: 'black'
   }
 ]
 
