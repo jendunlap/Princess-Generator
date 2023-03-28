@@ -87,6 +87,44 @@ const DressSelector = ({ dresses, dressColors, formState, setFormState }) => {
               </div>
             )
             break
+          case 'https://i.imgur.com/19LZndV.jpg':
+            return (
+              <div>
+                {selectingDress ? (
+                  <div className="dressMap">
+                    {dresses
+                      .filter((dress) => dress.color === 'red')
+                      .map((dress, index) => (
+                        <img
+                          className="mappedDresses"
+                          key={index}
+                          src={dress.shape}
+                          alt={dress.name}
+                          onClick={() => selectDress(dress)}
+                        />
+                      ))}
+                  </div>
+                ) : (
+                  <div
+                    className="selectDressButton"
+                    onClick={() => setSelectingDress(true)}
+                  >
+                    {dresses
+                      .filter((dress) => dress.color === 'red')
+                      .map((dress, index) => (
+                        <img
+                          className="mappedDresses"
+                          key={index}
+                          src={dress.shape}
+                          alt={dress.name}
+                          onClick={() => selectDress(dress)}
+                        />
+                      ))}
+                  </div>
+                )}
+              </div>
+            )
+            break
           case 'https://i.imgur.com/a2NEMMv.jpg':
             return (
               <div>
