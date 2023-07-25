@@ -178,6 +178,42 @@ const eyes = [
     shape: 'https://i.imgur.com/1P35JHf.png',
     url: 'https://i.imgur.com/MzD22zR.png',
     color: 'violet'
+  },
+  {
+    name: 'Moana',
+    shape: 'https://i.imgur.com/9iReCbN.png',
+    url: 'https://i.imgur.com/thgxaBl.png',
+    color: 'blue'
+  },
+  {
+    name: 'Moana',
+    shape: 'https://i.imgur.com/3xXzaeZ.png',
+    url: 'https://i.imgur.com/0u2s61W.png',
+    color: 'brown'
+  },
+  {
+    name: 'Moana',
+    shape: 'https://i.imgur.com/uTbLLyH.png',
+    url: 'https://i.imgur.com/U16smMI.png',
+    color: 'honey'
+  },
+  {
+    name: 'Moana',
+    shape: 'https://i.imgur.com/G0L9Uu4.png',
+    url: 'https://i.imgur.com/YiK007w.png',
+    color: 'gold'
+  },
+  {
+    name: 'Moana',
+    shape: 'https://i.imgur.com/b4sR0QP.png',
+    url: 'https://i.imgur.com/MY69bzw.png',
+    color: 'green'
+  },
+  {
+    name: 'Moana',
+    shape: 'https://i.imgur.com/B0fEnYU.png',
+    url: 'https://i.imgur.com/mxBp0VG.png',
+    color: 'violet'
   }
 ]
 
