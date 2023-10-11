@@ -376,6 +376,48 @@ const hairs = [
     shape: 'https://i.imgur.com/IIBpwpk.png',
     url: 'https://i.imgur.com/IIBpwpk.png',
     color: 'black'
+  },
+  {
+    name: 'Aroura',
+    shape: 'https://i.imgur.com/kQoNCJw.png',
+    url: 'https://i.imgur.com/kQoNCJw.png',
+    color: 'blonde'
+  },
+  {
+    name: 'Aroura',
+    shape: 'https://i.imgur.com/AV9Xujq.png',
+    url: 'https://i.imgur.com/AV9Xujq.png',
+    color: 'gold'
+  },
+  {
+    name: 'Aroura',
+    shape: 'https://i.imgur.com/VPEfdUC.png',
+    url: 'https://i.imgur.com/VPEfdUC.png',
+    color: 'orange'
+  },
+  {
+    name: 'Aroura',
+    shape: 'https://i.imgur.com/8z1OmhB.png',
+    url: 'https://i.imgur.com/8z1OmhB.png',
+    color: 'red'
+  },
+  {
+    name: 'Aroura',
+    shape: 'https://i.imgur.com/8ZDfwgP.png',
+    url: 'https://i.imgur.com/8ZDfwgP.png',
+    color: 'lightbrown'
+  },
+  {
+    name: 'Aroura',
+    shape: 'https://i.imgur.com/MqbhQX7.png',
+    url: 'https://i.imgur.com/MqbhQX7.png',
+    color: 'brown'
+  },
+  {
+    name: 'Aroura',
+    shape: 'https://i.imgur.com/dtdtNeC.png',
+    url: 'https://i.imgur.com/dtdtNeC.png',
+    color: 'black'
   }
 ]
 
