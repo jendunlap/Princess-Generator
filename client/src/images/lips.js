@@ -142,6 +142,54 @@ const lips = [
     shape: 'https://i.imgur.com/Djm4azA.png',
     url: 'https://i.imgur.com/bJTO0eZ.png',
     color: 'dark'
+  },
+  {
+    name: 'Aurora',
+    shape: 'https://i.imgur.com/6qKOsG6.png',
+    url: 'https://i.imgur.com/iml6YE7.png',
+    color: 'beige'
+  },
+  {
+    name: 'Aurora',
+    shape: 'https://i.imgur.com/MJZ9PC1.png',
+    url: 'https://i.imgur.com/36QlYrE.png',
+    color: 'lightorange'
+  },
+  {
+    name: 'Aurora',
+    shape: 'https://i.imgur.com/zuLGIVy.png',
+    url: 'https://i.imgur.com/TDHNK31.png',
+    color: 'lightpink'
+  },
+  {
+    name: 'Aurora',
+    shape: 'https://i.imgur.com/rZFq88P.png',
+    url: 'https://i.imgur.com/boM9xpH.png',
+    color: 'brightpink'
+  },
+  {
+    name: 'Aurora',
+    shape: 'https://i.imgur.com/6gcqONf.png',
+    url: 'https://i.imgur.com/NfTEZez.png',
+    color: 'hotpink'
+  },
+  {
+    name: 'Aurora',
+    shape: 'https://i.imgur.com/HQwckdc.png',
+    url: 'https://i.imgur.com/2XtXekG.png',
+    color: 'red'
+  },
+  {
+    name: 'Aurora',
+    shape: 'https://i.imgur.com/IdU1QpR.png',
+    url: 'https://i.imgur.com/V4DNr5C.png',
+    color: 'burgundy'
+  },
+  {
+    name: 'Aurora',
+    shape: 'https://i.imgur.com/kZGE8i3.png',
+    url: 'https://i.imgur.com/eSQoF54.png',
+    color: 'dark'
   }
 ]
 
