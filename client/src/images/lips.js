@@ -96,54 +96,6 @@ const lips = [
     color: 'dark'
   },
   {
-    name: 'Moana',
-    shape: 'https://i.imgur.com/vyAKJKk.png',
-    url: 'https://i.imgur.com/xJLQb52.png',
-    color: 'beige'
-  },
-  {
-    name: 'Moana',
-    shape: 'https://i.imgur.com/sfObKXt.png',
-    url: 'https://i.imgur.com/qxaxFa4.png',
-    color: 'lightorange'
-  },
-  {
-    name: 'Moana',
-    shape: 'https://i.imgur.com/Y836OgN.png',
-    url: 'https://i.imgur.com/4LOEwYA.png',
-    color: 'lightpink'
-  },
-  {
-    name: 'Moana',
-    shape: 'https://i.imgur.com/FLItDDf.png',
-    url: 'https://i.imgur.com/G7570Mk.png',
-    color: 'brightpink'
-  },
-  {
-    name: 'Moana',
-    shape: 'https://i.imgur.com/ddWThI2.png',
-    url: 'https://i.imgur.com/r4FFT5e.png',
-    color: 'hotpink'
-  },
-  {
-    name: 'Moana',
-    shape: 'https://i.imgur.com/eWE1xYH.png',
-    url: 'https://i.imgur.com/SOLwxXI.png',
-    color: 'red'
-  },
-  {
-    name: 'Moana',
-    shape: 'https://i.imgur.com/FVfl6bO.png',
-    url: 'https://i.imgur.com/KbJ1qSq.png',
-    color: 'burgundy'
-  },
-  {
-    name: 'Moana',
-    shape: 'https://i.imgur.com/Djm4azA.png',
-    url: 'https://i.imgur.com/bJTO0eZ.png',
-    color: 'dark'
-  },
-  {
     name: 'Aurora',
     shape: 'https://i.imgur.com/6qKOsG6.png',
     url: 'https://i.imgur.com/iml6YE7.png',
@@ -189,6 +141,54 @@ const lips = [
     name: 'Aurora',
     shape: 'https://i.imgur.com/kZGE8i3.png',
     url: 'https://i.imgur.com/eSQoF54.png',
+    color: 'dark'
+  },
+  {
+    name: 'Moana',
+    shape: 'https://i.imgur.com/vyAKJKk.png',
+    url: 'https://i.imgur.com/xJLQb52.png',
+    color: 'beige'
+  },
+  {
+    name: 'Moana',
+    shape: 'https://i.imgur.com/sfObKXt.png',
+    url: 'https://i.imgur.com/qxaxFa4.png',
+    color: 'lightorange'
+  },
+  {
+    name: 'Moana',
+    shape: 'https://i.imgur.com/Y836OgN.png',
+    url: 'https://i.imgur.com/4LOEwYA.png',
+    color: 'lightpink'
+  },
+  {
+    name: 'Moana',
+    shape: 'https://i.imgur.com/FLItDDf.png',
+    url: 'https://i.imgur.com/G7570Mk.png',
+    color: 'brightpink'
+  },
+  {
+    name: 'Moana',
+    shape: 'https://i.imgur.com/ddWThI2.png',
+    url: 'https://i.imgur.com/r4FFT5e.png',
+    color: 'hotpink'
+  },
+  {
+    name: 'Moana',
+    shape: 'https://i.imgur.com/eWE1xYH.png',
+    url: 'https://i.imgur.com/SOLwxXI.png',
+    color: 'red'
+  },
+  {
+    name: 'Moana',
+    shape: 'https://i.imgur.com/FVfl6bO.png',
+    url: 'https://i.imgur.com/KbJ1qSq.png',
+    color: 'burgundy'
+  },
+  {
+    name: 'Moana',
+    shape: 'https://i.imgur.com/Djm4azA.png',
+    url: 'https://i.imgur.com/bJTO0eZ.png',
     color: 'dark'
   }
 ]
