@@ -484,6 +484,60 @@ const dresses = [
     shape: 'https://i.imgur.com/nRovFfc.png',
     url: 'https://i.imgur.com/nRovFfc.png',
     color: 'black'
+  },
+  {
+    name: 'Aurora',
+    shape: 'https://i.imgur.com/NSNYIZC.png',
+    url: 'https://i.imgur.com/NSNYIZC.png',
+    color: 'pink'
+  },
+  {
+    name: 'Aurora',
+    shape: 'https://i.imgur.com/UcavzNS.png',
+    url: 'https://i.imgur.com/UcavzNS.png',
+    color: 'red'
+  },
+  {
+    name: 'Aurora',
+    shape: 'https://i.imgur.com/oT8eFIT.png',
+    url: 'https://i.imgur.com/oT8eFIT.png',
+    color: 'yellow'
+  },
+  {
+    name: 'Aurora',
+    shape: 'https://i.imgur.com/ZrHeUDI.png',
+    url: 'https://i.imgur.com/ZrHeUDI.png',
+    color: 'green'
+  },
+  {
+    name: 'Aurora',
+    shape: 'https://i.imgur.com/BzAUeJ9.png',
+    url: 'https://i.imgur.com/BzAUeJ9.png',
+    color: 'blue'
+  },
+  {
+    name: 'Aurora',
+    shape: 'https://i.imgur.com/GehtWOD.png',
+    url: 'https://i.imgur.com/GehtWOD.png',
+    color: 'turquoise'
+  },
+  {
+    name: 'Aurora',
+    shape: 'https://i.imgur.com/JHI6J9v.png',
+    url: 'https://i.imgur.com/JHI6J9v.png',
+    color: 'teal'
+  },
+  {
+    name: 'Aurora',
+    shape: 'https://i.imgur.com/UTtVNIj.png',
+    url: 'https://i.imgur.com/UTtVNIj.png',
+    color: 'purple'
+  },
+  {
+    name: 'Aurora',
+    shape: 'https://i.imgur.com/PhWdjFN.png',
+    url: 'https://i.imgur.com/PhWdjFN.png',
+    color: 'black'
   }
 ]
 
