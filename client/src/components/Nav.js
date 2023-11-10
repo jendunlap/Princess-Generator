@@ -1,52 +1,54 @@
 import { Link, useNavigate } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
-const Nav = () => {
-  let navigate = useNavigate
+const Nav = ({ user, logOut }) => {
+  let navigate = useNavigate()
 
-  const [user, setUser] = useState([])
-
-  const logOut = () => {
-    setUser(null)
-    localStorage.clear()
-    navigate('/')
-  }
+  useEffect(() => {}, [user])
 
   return (
     <header className="navBar">
-      {window.location.pathname === '/' ? (
-        <nav className="nav">
-          <div>
-            <Link to="/login" className="logout">
-              Sign In
-            </Link>
-          </div>
-          <div>
-            <Link to="/princesses" className="headerLink">
-              Princesses
-            </Link>
-          </div>
-        </nav>
-      ) : (
-        <nav className="nav">
-          <div>
-            <Link to="/" className="logout" onClick={logOut}>
-              Logout
-            </Link>
-          </div>
-          <div>
-            <Link to="/create" className="headerLink">
-              Create
-            </Link>
-            <Link to="/gallery" className="headerLink">
-              Gallery
-            </Link>
-            <Link to="/princesses" className="headerLink">
-              Princesses
-            </Link>
-          </div>
-        </nav>
-      )}
+      <nav className="nav">
+        {user ? (
+          <>
+            <div>
+              <Link to="/" className="logout" onClick={logOut}>
+                Logout
+              </Link>
+            </div>
+            <div>
+              <Link to="/create" className="headerLink">
+                Create
+              </Link>
+              <Link to="/gallery" className="headerLink">
+                Gallery
+              </Link>
+              <Link to="/princesses" className="headerLink">
+                Princesses
+              </Link>
+            </div>
+          </>
+        ) : (
+          <>
+            <div>
+              <Link to="/login" className="logout">
+                Sign In
+              </Link>
+            </div>
+            <div>
+              <Link to="/create" className="headerLink">
+                Create
+              </Link>
+              <Link to="/gallery" className="headerLink">
+                Gallery
+              </Link>
+              <Link to="/princesses" className="headerLink">
+                Princesses
+              </Link>
+            </div>
+          </>
+        )}
+      </nav>
     </header>
   )
 }

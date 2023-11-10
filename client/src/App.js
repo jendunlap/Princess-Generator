@@ -1,5 +1,5 @@
 import './App.css'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useNavigate } from 'react-router-dom'
 import Create from './pages/Create'
 import Login from './pages/Login'
 import Princesses from './pages/Princesses'
@@ -11,11 +11,19 @@ import { CheckSession } from './services/Auth'
 import { useState, useEffect } from 'react'
 
 function App() {
-  const [user, setUser] = useState([])
+  let navigate = useNavigate()
+
+  const [user, setUser] = useState(null)
 
   const checkToken = async () => {
     const user = await CheckSession()
     setUser(user)
+  }
+
+  const logOut = () => {
+    setUser(null)
+    localStorage.clear()
+    navigate('/')
   }
 
   useEffect(() => {
@@ -27,8 +35,8 @@ function App() {
 
   return (
     <div className="App">
-      {/* {window.location.pathname === '/' ? null : <Nav />} */}
-      <Nav />
+      <Nav user={user} logOut={logOut} />
+      {/* <Nav /> */}
       <main>
         <Routes>
           <Route path="/" element={<Create />} />
