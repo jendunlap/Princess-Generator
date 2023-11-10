@@ -17,7 +17,7 @@ const Nav = () => {
       {window.location.pathname === '/' ? (
         <nav className="nav">
           <div>
-            <Link to="/" className="logout">
+            <Link to="/login" className="logout">
               Sign In
             </Link>
           </div>

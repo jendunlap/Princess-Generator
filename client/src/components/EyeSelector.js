@@ -23,6 +23,7 @@ const EyeSelector = ({ eyes, eyeColors, formState, setFormState }) => {
     setSelectedEye(tempEye)
     setFormState(tempState)
   }
+
   const selectEyes = (eye) => {
     let tempState = { ...formState, eyes: eye.url }
     let tempEye = { ...selectedEye }
@@ -47,10 +48,6 @@ const EyeSelector = ({ eyes, eyeColors, formState, setFormState }) => {
           />
         ))}
       </div>
-      {/* SHAPE */}
-      {/* <label className="eyesDiv formLabel" htmlFor="selectEyes">
-        Eye Shape
-      </label> */}
       {(() => {
         switch (selectedEye.colorUrl) {
           case 'https://i.imgur.com/dRvr5fJ.jpg':

@@ -31,7 +31,8 @@ function App() {
       <Nav />
       <main>
         <Routes>
-          <Route path="/" element={<Login setUser={setUser} />} />
+          <Route path="/" element={<Create />} />
+          <Route path="/login" element={<Login setUser={setUser} />} />
           <Route path="/create" element={<Create />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/princesses" element={<Princesses />} />
