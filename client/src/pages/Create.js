@@ -23,6 +23,7 @@ import NecklaceSelector from '../components/NecklaceSelector'
 import BackgroundSelector from '../components/BackgroundSelector'
 
 const Create = ({ user }) => {
+  console.log('User in Create component:', user)
   let navigate = useNavigate()
 
   const initialState = {
@@ -40,23 +41,13 @@ const Create = ({ user }) => {
 
   const [formState, setFormState] = useState(initialState)
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault()
-  //   await Client.post('/myprincesses', formState)
-  //   navigate('/gallery')
-  // }
+  const signIn = () => {
+    navigate('/login')
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
 
-    // Check if the user is signed in
-    if (!user) {
-      // If not signed in, prompt the user to sign in
-      navigate('/logintosave')
-      return
-    }
-
-    // If signed in, add the princess to the gallery
     await Client.post('/myprincesses', formState)
     navigate('/gallery')
   }
@@ -66,113 +57,256 @@ const Create = ({ user }) => {
   }
 
   return (
-    <div className="createPage">
-      <h1 className="createHeader">CREATE your PRINCESS!</h1>
-      <div className="formContainer">
-        <form className="createForm" onSubmit={handleSubmit}>
-          <label className="skinDiv formLabel" htmlFor="selectSkin">
-            SELECT MELANIN
-          </label>
-          <SkinSelector
-            skins={skins}
-            formState={formState}
-            setFormState={setFormState}
-          />
-          <label className="eyeColorDiv formLabel" htmlFor="selectEyeColor">
-            EYE COLOR & SHAPE
-          </label>
-          <EyeSelector
-            eyes={eyes}
-            eyeColors={eyeColors}
-            formState={formState}
-            setFormState={setFormState}
-          />
-          <label className="lipsDiv formLabel" htmlFor="selectLips">
-            LIP COLOR & SHAPE
-          </label>
-          <LipSelector
-            lips={lips}
-            lipColors={lipColors}
-            formState={formState}
-            setFormState={setFormState}
-          />
-          <label className="hairDiv formLabel" htmlFor="selectHairs">
-            HAIR COLOR & STYLE
-          </label>
-          <HairSelector
-            hairs={hairs}
-            hairColors={hairColors}
-            formState={formState}
-            setFormState={setFormState}
-          />
-          <label className="dressDiv formLabel" htmlFor="selectDress">
-            DRESS COLOR & STYLE
-          </label>
-          <DressSelector
-            dresses={dresses}
-            dressColors={dressColors}
-            formState={formState}
-            setFormState={setFormState}
-          />
-          <label className="earringDiv formLabel" htmlFor="selectEarrings">
-            EARRINGS
-          </label>
-          <EarringSelector
-            earrings={earrings}
-            formState={formState}
-            setFormState={setFormState}
-          />
-          <label className="necklaceDiv formLabel" htmlFor="selectEarrings">
-            NECKLACES
-          </label>
-          <NecklaceSelector
-            necklaces={necklaces}
-            formState={formState}
-            setFormState={setFormState}
-          />
-          <label className="backgroundDiv formLabel" htmlFor="selectBackground">
-            BACKGROUND
-          </label>
-          <BackgroundSelector
-            backgrounds={backgrounds}
-            formState={formState}
-            setFormState={setFormState}
-          />
-          <div className="nameDiv">
-            <label htmlFor="name" className="createPrincessName formLabel">
-              NAME YOUR PRINCESS!
-            </label>
-            <input
-              onChange={handleChange}
-              type="text"
-              id="name"
-              value={formState.name}
-            ></input>
+    <div>
+      {!user ? (
+        <div className="createPage">
+          <h1 className="createHeader">CREATE your PRINCESS!</h1>
+          <div className="formContainer">
+            <form className="createForm" onSubmit={handleSubmit}>
+              <label className="skinDiv formLabel" htmlFor="selectSkin">
+                SELECT MELANIN
+              </label>
+              <SkinSelector
+                skins={skins}
+                formState={formState}
+                setFormState={setFormState}
+              />
+              <label className="eyeColorDiv formLabel" htmlFor="selectEyeColor">
+                EYE COLOR & SHAPE
+              </label>
+              <EyeSelector
+                eyes={eyes}
+                eyeColors={eyeColors}
+                formState={formState}
+                setFormState={setFormState}
+              />
+              <label className="lipsDiv formLabel" htmlFor="selectLips">
+                LIP COLOR & SHAPE
+              </label>
+              <LipSelector
+                lips={lips}
+                lipColors={lipColors}
+                formState={formState}
+                setFormState={setFormState}
+              />
+              <label className="hairDiv formLabel" htmlFor="selectHairs">
+                HAIR COLOR & STYLE
+              </label>
+              <HairSelector
+                hairs={hairs}
+                hairColors={hairColors}
+                formState={formState}
+                setFormState={setFormState}
+              />
+              <label className="dressDiv formLabel" htmlFor="selectDress">
+                DRESS COLOR & STYLE
+              </label>
+              <DressSelector
+                dresses={dresses}
+                dressColors={dressColors}
+                formState={formState}
+                setFormState={setFormState}
+              />
+              <label className="earringDiv formLabel" htmlFor="selectEarrings">
+                EARRINGS
+              </label>
+              <EarringSelector
+                earrings={earrings}
+                formState={formState}
+                setFormState={setFormState}
+              />
+              <label className="necklaceDiv formLabel" htmlFor="selectEarrings">
+                NECKLACES
+              </label>
+              <NecklaceSelector
+                necklaces={necklaces}
+                formState={formState}
+                setFormState={setFormState}
+              />
+              <label
+                className="backgroundDiv formLabel"
+                htmlFor="selectBackground"
+              >
+                BACKGROUND
+              </label>
+              <BackgroundSelector
+                backgrounds={backgrounds}
+                formState={formState}
+                setFormState={setFormState}
+              />
+              <div className="nameDiv">
+                <label htmlFor="name" className="createPrincessName formLabel">
+                  NAME YOUR PRINCESS!
+                </label>
+                <input
+                  onChange={handleChange}
+                  type="text"
+                  id="name"
+                  value={formState.name}
+                ></input>
+              </div>
+              <div>
+                <button className="addToGallery" onClick={signIn}>
+                  Login to Add to Gallery!
+                </button>
+              </div>
+            </form>
+            <div className="princessCreation">
+              <img
+                className="princessCreationComponent"
+                src={formState.background}
+              />
+              <img className="princessCreationComponent" src={formState.skin} />
+              <img className="princessCreationComponent" src={formState.eyes} />
+              <img
+                className="princessCreationComponent"
+                src={formState.mouth}
+              />
+              <img className="princessCreationComponent" src={formState.hair} />
+              <img
+                className="princessCreationComponent"
+                src={formState.dress}
+              />
+              <img
+                className="princessCreationComponent"
+                src={formState.earring}
+              />
+              <img
+                className="princessCreationComponent"
+                src={formState.necklace}
+              />
+              <img
+                className="princessCreationFrame"
+                src="https://i.imgur.com/BIo6ToN.png"
+              />
+            </div>
           </div>
-          <div>
-            <button className="addToGallery" type="submit">
-              Add to Gallery!
-            </button>
-          </div>
-        </form>
-        <div className="princessCreation">
-          <img
-            className="princessCreationComponent"
-            src={formState.background}
-          />
-          <img className="princessCreationComponent" src={formState.skin} />
-          <img className="princessCreationComponent" src={formState.eyes} />
-          <img className="princessCreationComponent" src={formState.mouth} />
-          <img className="princessCreationComponent" src={formState.hair} />
-          <img className="princessCreationComponent" src={formState.dress} />
-          <img className="princessCreationComponent" src={formState.earring} />
-          <img className="princessCreationComponent" src={formState.necklace} />
-          <img
-            className="princessCreationFrame"
-            src="https://i.imgur.com/BIo6ToN.png"
-          />
         </div>
-      </div>
+      ) : (
+        <div className="createPage">
+          <h1 className="createHeader">CREATE your PRINCESS!</h1>
+          <div className="formContainer">
+            <form className="createForm" onSubmit={handleSubmit}>
+              <label className="skinDiv formLabel" htmlFor="selectSkin">
+                SELECT MELANIN
+              </label>
+              <SkinSelector
+                skins={skins}
+                formState={formState}
+                setFormState={setFormState}
+              />
+              <label className="eyeColorDiv formLabel" htmlFor="selectEyeColor">
+                EYE COLOR & SHAPE
+              </label>
+              <EyeSelector
+                eyes={eyes}
+                eyeColors={eyeColors}
+                formState={formState}
+                setFormState={setFormState}
+              />
+              <label className="lipsDiv formLabel" htmlFor="selectLips">
+                LIP COLOR & SHAPE
+              </label>
+              <LipSelector
+                lips={lips}
+                lipColors={lipColors}
+                formState={formState}
+                setFormState={setFormState}
+              />
+              <label className="hairDiv formLabel" htmlFor="selectHairs">
+                HAIR COLOR & STYLE
+              </label>
+              <HairSelector
+                hairs={hairs}
+                hairColors={hairColors}
+                formState={formState}
+                setFormState={setFormState}
+              />
+              <label className="dressDiv formLabel" htmlFor="selectDress">
+                DRESS COLOR & STYLE
+              </label>
+              <DressSelector
+                dresses={dresses}
+                dressColors={dressColors}
+                formState={formState}
+                setFormState={setFormState}
+              />
+              <label className="earringDiv formLabel" htmlFor="selectEarrings">
+                EARRINGS
+              </label>
+              <EarringSelector
+                earrings={earrings}
+                formState={formState}
+                setFormState={setFormState}
+              />
+              <label className="necklaceDiv formLabel" htmlFor="selectEarrings">
+                NECKLACES
+              </label>
+              <NecklaceSelector
+                necklaces={necklaces}
+                formState={formState}
+                setFormState={setFormState}
+              />
+              <label
+                className="backgroundDiv formLabel"
+                htmlFor="selectBackground"
+              >
+                BACKGROUND
+              </label>
+              <BackgroundSelector
+                backgrounds={backgrounds}
+                formState={formState}
+                setFormState={setFormState}
+              />
+              <div className="nameDiv">
+                <label htmlFor="name" className="createPrincessName formLabel">
+                  NAME YOUR PRINCESS!
+                </label>
+                <input
+                  onChange={handleChange}
+                  type="text"
+                  id="name"
+                  value={formState.name}
+                ></input>
+              </div>
+              <div>
+                <button className="addToGallery" type="submit">
+                  Add to Gallery!
+                </button>
+              </div>
+            </form>
+            <div className="princessCreation">
+              <img
+                className="princessCreationComponent"
+                src={formState.background}
+              />
+              <img className="princessCreationComponent" src={formState.skin} />
+              <img className="princessCreationComponent" src={formState.eyes} />
+              <img
+                className="princessCreationComponent"
+                src={formState.mouth}
+              />
+              <img className="princessCreationComponent" src={formState.hair} />
+              <img
+                className="princessCreationComponent"
+                src={formState.dress}
+              />
+              <img
+                className="princessCreationComponent"
+                src={formState.earring}
+              />
+              <img
+                className="princessCreationComponent"
+                src={formState.necklace}
+              />
+              <img
+                className="princessCreationFrame"
+                src="https://i.imgur.com/BIo6ToN.png"
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

@@ -28,7 +28,7 @@ const RegisterForm = ({ setIsVisible }) => {
     })
     setNewUser(initialState)
     setIsVisible(true)
-    navigate('/')
+    navigate('/logincreated')
   }
 
   return (
