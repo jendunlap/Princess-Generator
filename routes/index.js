@@ -19,6 +19,8 @@ router.get('/users', controllers.getAllUsers)
 
 router.get('/users/:id', controllers.getUserById)
 
+router.get('/myprincesses', controllers.getMyPrincesses)
+
 router.put(
   '/users/:id',
   middleware.stripToken,

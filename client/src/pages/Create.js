@@ -22,7 +22,7 @@ import EarringSelector from '../components/EarringSelector'
 import NecklaceSelector from '../components/NecklaceSelector'
 import BackgroundSelector from '../components/BackgroundSelector'
 
-const Create = () => {
+const Create = ({ user }) => {
   let navigate = useNavigate()
 
   const initialState = {
@@ -40,8 +40,23 @@ const Create = () => {
 
   const [formState, setFormState] = useState(initialState)
 
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault()
+  //   await Client.post('/myprincesses', formState)
+  //   navigate('/gallery')
+  // }
+
   const handleSubmit = async (e) => {
     e.preventDefault()
+
+    // Check if the user is signed in
+    if (!user) {
+      // If not signed in, prompt the user to sign in
+      navigate('/logintosave')
+      return
+    }
+
+    // If signed in, add the princess to the gallery
     await Client.post('/myprincesses', formState)
     navigate('/gallery')
   }

@@ -70,7 +70,7 @@ const RegisterForm = ({ setIsVisible }) => {
         </div>
         <input
           className="input"
-          placeholder="Confirm Password"
+          placeholder="CONFIRM PASSWORD"
           type="password"
           onChange={handleChange}
           value={newUser.confirmPassword}

@@ -2,6 +2,7 @@ import './App.css'
 import { Route, Routes, useNavigate } from 'react-router-dom'
 import Create from './pages/Create'
 import Login from './pages/Login'
+import LoginPrompt from './pages/LoginPrompt'
 import Princesses from './pages/Princesses'
 import PrincessInfo from './pages/PrincessInfo'
 import Gallery from './pages/Gallery'
@@ -41,8 +42,12 @@ function App() {
         <Routes>
           <Route path="/" element={<Create />} />
           <Route path="/login" element={<Login setUser={setUser} />} />
+          <Route
+            path="/logintosave"
+            element={<LoginPrompt setUser={setUser} />}
+          />
           <Route path="/create" element={<Create />} />
-          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/gallery" element={<Gallery user={user} />} />
           <Route path="/princesses" element={<Princesses />} />
           <Route path="/princesses/:princessId" element={<PrincessInfo />} />
           <Route path="/myprincesses/:princessId" element={<PrincessInfo />} />
